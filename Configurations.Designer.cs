@@ -32,23 +32,6 @@
             this.configurationtblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dashboardDataSet = new WindowsDashboardApp.dashboardDataSet();
             this.configuarationtypetblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.TabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
@@ -59,15 +42,6 @@
             this.vGridControl1 = new DevExpress.XtraVerticalGrid.VGridControl();
             this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.rowID = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowconfig_type_id = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowconfig_description = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowconfig_remarks = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowuser_def1 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowuser_def2 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowuser_def3 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowuser_def4 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowuser_def5 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.fkcameraconfigtblconfigtblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cardView1 = new DevExpress.XtraGrid.Views.Card.CardView();
@@ -79,11 +53,18 @@
             this.colcamera_port_no_fid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcamera_active_fid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colconfig_id_fld = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rowID = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowconfig_type_id = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowconfig_description = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowconfig_remarks = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowuser_def1 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowuser_def2 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowuser_def3 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowuser_def4 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowuser_def5 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             ((System.ComponentModel.ISupportInitialize)(this.configurationtblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configuarationtypetblBindingSource)).BeginInit();
-            this.TabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
@@ -107,176 +88,6 @@
             this.configuarationtypetblBindingSource.DataMember = "configuaration_type_tbl";
             this.configuarationtypetblBindingSource.DataSource = this.dashboardDataSet;
             // 
-            // TabControl1
-            // 
-            this.TabControl1.AccessibleName = "";
-            this.TabControl1.Controls.Add(this.tabPage1);
-            this.TabControl1.Controls.Add(this.tabPage2);
-            this.TabControl1.Controls.Add(this.tabPage3);
-            this.TabControl1.Location = new System.Drawing.Point(32, -1);
-            this.TabControl1.Name = "TabControl1";
-            this.TabControl1.SelectedIndex = 0;
-            this.TabControl1.Size = new System.Drawing.Size(522, 704);
-            this.TabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(514, 678);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Unidentified Faces";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(215, 108);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 31);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Browse";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(330, 446);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 53);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(76, 446);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 53);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 363);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 23);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Port Number";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 285);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 23);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Password";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 213);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 23);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "User ID for Camera";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Live Camera Feed IP";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Folder Location";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(215, 363);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(254, 31);
-            this.textBox5.TabIndex = 4;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(215, 285);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(254, 31);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(215, 213);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 31);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(215, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 31);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(215, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 31);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(514, 678);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "No Camera";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(514, 678);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "No Kids";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // folderBrowserDialog1
             // 
             this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
@@ -299,10 +110,11 @@
             // 
             // controlNavigator1
             // 
-            this.controlNavigator1.Location = new System.Drawing.Point(586, -1);
+            this.controlNavigator1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.controlNavigator1.Location = new System.Drawing.Point(0, 0);
             this.controlNavigator1.Name = "controlNavigator1";
             this.controlNavigator1.NavigatableControl = this.vGridControl1;
-            this.controlNavigator1.Size = new System.Drawing.Size(563, 46);
+            this.controlNavigator1.Size = new System.Drawing.Size(774, 46);
             this.controlNavigator1.TabIndex = 2;
             this.controlNavigator1.Text = "controlNavigator1";
             this.controlNavigator1.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.controlNavigator1_ButtonClick);
@@ -313,9 +125,26 @@
             // 
             // vGridControl1
             // 
+            this.vGridControl1.Appearance.RowHeaderPanel.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.vGridControl1.Appearance.RowHeaderPanel.ForeColor = System.Drawing.Color.White;
+            this.vGridControl1.Appearance.RowHeaderPanel.Options.UseBackColor = true;
+            this.vGridControl1.Appearance.RowHeaderPanel.Options.UseForeColor = true;
+            this.vGridControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.vGridControl1.CustomizationFormBounds = new System.Drawing.Rectangle(457, 176, 214, 258);
             this.vGridControl1.DataSource = this.configurationtblBindingSource;
-            this.vGridControl1.Location = new System.Drawing.Point(560, 80);
+            this.vGridControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.vGridControl1.Location = new System.Drawing.Point(0, 46);
             this.vGridControl1.Name = "vGridControl1";
+            this.vGridControl1.OptionsBehavior.AutoFocusNewRecord = true;
+            this.vGridControl1.OptionsBehavior.PreserveChildRows = true;
+            this.vGridControl1.OptionsBehavior.RecordsMouseWheel = true;
+            this.vGridControl1.OptionsBehavior.ShowEditorOnMouseUp = true;
+            this.vGridControl1.OptionsLayout.StoreAppearance = true;
+            this.vGridControl1.OptionsLayout.StoreFormatRules = true;
+            this.vGridControl1.OptionsView.AllowGlyphSkinning = true;
+            this.vGridControl1.OptionsView.AllowHtmlText = true;
+            this.vGridControl1.OptionsView.AutoScaleBands = true;
+            this.vGridControl1.OptionsView.ShowEmptyRowImage = true;
             this.vGridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1});
             this.vGridControl1.RowHeaderWidth = 192;
@@ -329,8 +158,10 @@
             this.rowuser_def3,
             this.rowuser_def4,
             this.rowuser_def5});
-            this.vGridControl1.Size = new System.Drawing.Size(614, 106);
+            this.vGridControl1.Size = new System.Drawing.Size(774, 129);
             this.vGridControl1.TabIndex = 3;
+            this.vGridControl1.TreeButtonStyle = DevExpress.XtraVerticalGrid.TreeButtonStyle.ExplorerBar;
+            this.vGridControl1.UseDisabledStatePainter = false;
             // 
             // repositoryItemGridLookUpEdit1
             // 
@@ -352,75 +183,15 @@
             this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // rowID
-            // 
-            this.rowID.Name = "rowID";
-            this.rowID.Properties.Caption = "ID";
-            this.rowID.Properties.FieldName = "ID";
-            this.rowID.Visible = false;
-            // 
-            // rowconfig_type_id
-            // 
-            this.rowconfig_type_id.Name = "rowconfig_type_id";
-            this.rowconfig_type_id.Properties.Caption = "Configuration Type";
-            this.rowconfig_type_id.Properties.FieldName = "config_type_id";
-            this.rowconfig_type_id.Properties.RowEdit = this.repositoryItemGridLookUpEdit1;
-            // 
-            // rowconfig_description
-            // 
-            this.rowconfig_description.Name = "rowconfig_description";
-            this.rowconfig_description.Properties.Caption = "Description";
-            this.rowconfig_description.Properties.FieldName = "config_description";
-            // 
-            // rowconfig_remarks
-            // 
-            this.rowconfig_remarks.Name = "rowconfig_remarks";
-            this.rowconfig_remarks.Properties.Caption = "Remarks";
-            this.rowconfig_remarks.Properties.FieldName = "config_remarks";
-            // 
-            // rowuser_def1
-            // 
-            this.rowuser_def1.Name = "rowuser_def1";
-            this.rowuser_def1.Properties.Caption = "user_def1";
-            this.rowuser_def1.Properties.FieldName = "user_def1";
-            this.rowuser_def1.Visible = false;
-            // 
-            // rowuser_def2
-            // 
-            this.rowuser_def2.Name = "rowuser_def2";
-            this.rowuser_def2.Properties.Caption = "user_def2";
-            this.rowuser_def2.Properties.FieldName = "user_def2";
-            this.rowuser_def2.Visible = false;
-            // 
-            // rowuser_def3
-            // 
-            this.rowuser_def3.Name = "rowuser_def3";
-            this.rowuser_def3.Properties.Caption = "user_def3";
-            this.rowuser_def3.Properties.FieldName = "user_def3";
-            this.rowuser_def3.Visible = false;
-            // 
-            // rowuser_def4
-            // 
-            this.rowuser_def4.Name = "rowuser_def4";
-            this.rowuser_def4.Properties.Caption = "user_def4";
-            this.rowuser_def4.Properties.FieldName = "user_def4";
-            this.rowuser_def4.Visible = false;
-            // 
-            // rowuser_def5
-            // 
-            this.rowuser_def5.Name = "rowuser_def5";
-            this.rowuser_def5.Properties.Caption = "user_def5";
-            this.rowuser_def5.Properties.FieldName = "user_def5";
-            this.rowuser_def5.Visible = false;
-            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.fkcameraconfigtblconfigtblBindingSource;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.controlNavigator1_ButtonClick);
-            this.gridControl1.Location = new System.Drawing.Point(560, 192);
+            this.gridControl1.Location = new System.Drawing.Point(0, 175);
             this.gridControl1.MainView = this.cardView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(614, 200);
+            this.gridControl1.Size = new System.Drawing.Size(774, 578);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -435,6 +206,33 @@
             // 
             this.cardView1.Appearance.Card.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cardView1.Appearance.Card.Options.UseFont = true;
+            this.cardView1.Appearance.CardCaption.BackColor = System.Drawing.Color.Olive;
+            this.cardView1.Appearance.CardCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardView1.Appearance.CardCaption.ForeColor = System.Drawing.Color.White;
+            this.cardView1.Appearance.CardCaption.Options.UseBackColor = true;
+            this.cardView1.Appearance.CardCaption.Options.UseFont = true;
+            this.cardView1.Appearance.CardCaption.Options.UseForeColor = true;
+            this.cardView1.Appearance.FieldCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardView1.Appearance.FieldCaption.Options.UseFont = true;
+            this.cardView1.Appearance.FieldValue.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardView1.Appearance.FieldValue.Options.UseFont = true;
+            this.cardView1.Appearance.FilterPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardView1.Appearance.FilterPanel.Options.UseFont = true;
+            this.cardView1.Appearance.FocusedCardCaption.BackColor = System.Drawing.Color.Teal;
+            this.cardView1.Appearance.FocusedCardCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardView1.Appearance.FocusedCardCaption.ForeColor = System.Drawing.Color.White;
+            this.cardView1.Appearance.FocusedCardCaption.Options.UseBackColor = true;
+            this.cardView1.Appearance.FocusedCardCaption.Options.UseFont = true;
+            this.cardView1.Appearance.FocusedCardCaption.Options.UseForeColor = true;
+            this.cardView1.Appearance.HideSelectionCardCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.cardView1.Appearance.HideSelectionCardCaption.ForeColor = System.Drawing.Color.White;
+            this.cardView1.Appearance.HideSelectionCardCaption.Options.UseBackColor = true;
+            this.cardView1.Appearance.HideSelectionCardCaption.Options.UseForeColor = true;
+            this.cardView1.Appearance.SelectedCardCaption.BackColor = System.Drawing.Color.Teal;
+            this.cardView1.Appearance.SelectedCardCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardView1.Appearance.SelectedCardCaption.Options.UseBackColor = true;
+            this.cardView1.Appearance.SelectedCardCaption.Options.UseFont = true;
+            this.cardView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.cardView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colID,
             this.colfolder_fid,
@@ -446,6 +244,7 @@
             this.colconfig_id_fld});
             this.cardView1.GridControl = this.gridControl1;
             this.cardView1.Name = "cardView1";
+            this.cardView1.PaintStyleName = "Style3D";
             this.cardView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Auto;
             // 
             // colID
@@ -506,15 +305,76 @@
             this.colconfig_id_fld.FieldName = "config_id_fld";
             this.colconfig_id_fld.Name = "colconfig_id_fld";
             // 
+            // rowID
+            // 
+            this.rowID.Name = "rowID";
+            this.rowID.Properties.Caption = "ID";
+            this.rowID.Properties.FieldName = "ID";
+            this.rowID.Visible = false;
+            // 
+            // rowconfig_type_id
+            // 
+            this.rowconfig_type_id.Name = "rowconfig_type_id";
+            this.rowconfig_type_id.Properties.Caption = "Configuration Type";
+            this.rowconfig_type_id.Properties.FieldName = "config_type_id";
+            this.rowconfig_type_id.Properties.RowEdit = this.repositoryItemGridLookUpEdit1;
+            // 
+            // rowconfig_description
+            // 
+            this.rowconfig_description.Height = 16;
+            this.rowconfig_description.Name = "rowconfig_description";
+            this.rowconfig_description.Properties.Caption = "Description";
+            this.rowconfig_description.Properties.FieldName = "config_description";
+            // 
+            // rowconfig_remarks
+            // 
+            this.rowconfig_remarks.Name = "rowconfig_remarks";
+            this.rowconfig_remarks.Properties.Caption = "Remarks";
+            this.rowconfig_remarks.Properties.FieldName = "config_remarks";
+            // 
+            // rowuser_def1
+            // 
+            this.rowuser_def1.Name = "rowuser_def1";
+            this.rowuser_def1.Properties.Caption = "user_def1";
+            this.rowuser_def1.Properties.FieldName = "user_def1";
+            this.rowuser_def1.Visible = false;
+            // 
+            // rowuser_def2
+            // 
+            this.rowuser_def2.Name = "rowuser_def2";
+            this.rowuser_def2.Properties.Caption = "user_def2";
+            this.rowuser_def2.Properties.FieldName = "user_def2";
+            this.rowuser_def2.Visible = false;
+            // 
+            // rowuser_def3
+            // 
+            this.rowuser_def3.Name = "rowuser_def3";
+            this.rowuser_def3.Properties.Caption = "user_def3";
+            this.rowuser_def3.Properties.FieldName = "user_def3";
+            this.rowuser_def3.Visible = false;
+            // 
+            // rowuser_def4
+            // 
+            this.rowuser_def4.Name = "rowuser_def4";
+            this.rowuser_def4.Properties.Caption = "user_def4";
+            this.rowuser_def4.Properties.FieldName = "user_def4";
+            this.rowuser_def4.Visible = false;
+            // 
+            // rowuser_def5
+            // 
+            this.rowuser_def5.Name = "rowuser_def5";
+            this.rowuser_def5.Properties.Caption = "user_def5";
+            this.rowuser_def5.Properties.FieldName = "user_def5";
+            this.rowuser_def5.Visible = false;
+            // 
             // Configurations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 753);
+            this.ClientSize = new System.Drawing.Size(774, 753);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.vGridControl1);
             this.Controls.Add(this.controlNavigator1);
-            this.Controls.Add(this.TabControl1);
             this.Name = "Configurations";
             this.Text = "Configurations";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Configurations_FormClosed);
@@ -522,9 +382,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.configurationtblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.configuarationtypetblBindingSource)).EndInit();
-            this.TabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
@@ -536,25 +393,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl TabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private dashboardDataSet dashboardDataSet;
@@ -567,15 +406,6 @@
         private DevExpress.XtraVerticalGrid.VGridControl vGridControl1;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowID;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowconfig_type_id;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowconfig_description;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowconfig_remarks;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def1;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def2;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def3;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def4;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def5;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.BindingSource fkcameraconfigtblconfigtblBindingSource;
         private DevExpress.XtraGrid.Views.Card.CardView cardView1;
@@ -587,5 +417,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn colcamera_port_no_fid;
         private DevExpress.XtraGrid.Columns.GridColumn colcamera_active_fid;
         private DevExpress.XtraGrid.Columns.GridColumn colconfig_id_fld;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowID;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowconfig_type_id;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowconfig_description;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowconfig_remarks;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def1;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def2;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def3;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def4;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow rowuser_def5;
     }
 }
