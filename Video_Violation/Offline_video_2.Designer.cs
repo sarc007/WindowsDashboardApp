@@ -1,6 +1,6 @@
 ﻿namespace Video_Violation
 {
-    partial class Form2
+    partial class Offline_video_2
     {
         /// <summary>
         /// Required designer variable.

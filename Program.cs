@@ -16,8 +16,9 @@ namespace WindowsDashboardApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            //Application.Run(new reports());
+            //Application.Run(new Form2());
+            //Application.Run(new No_Photos());
+           Application.Run(new MainForm());
             
         }
     }

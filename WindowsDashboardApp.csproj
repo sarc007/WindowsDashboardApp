@@ -41,11 +41,34 @@
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -68,15 +91,38 @@
   <ItemGroup>
     <Compile Include="Configuration.cs" />
     <Compile Include="Configurations.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Configurations.Designer.cs">
       <DependentUpon>Configurations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardDataSet.cs">
+      <DependentUpon>dashboardDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="dashboardDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dashboardDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dashboardDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dashboardDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dashboardDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dashboardDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -84,11 +130,59 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Form2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FR_LIve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="FR_LIve.Designer.cs">
+      <DependentUpon>FR_LIve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="No_Photos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="No_Photos.Designer.cs">
+      <DependentUpon>No_Photos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Object_Detectioncs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Object_Detectioncs.Designer.cs">
+      <DependentUpon>Object_Detectioncs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline_Violation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline_Violation.Designer.cs">
+      <DependentUpon>Offline_Violation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline_Violation_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline_Violation_1.Designer.cs">
+      <DependentUpon>Offline_Violation_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online_Live.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online_Live.Designer.cs">
+      <DependentUpon>Online_Live.cs</DependentUpon>
+    </Compile>
+    <Compile Include="online_offline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="online_offline.Designer.cs">
+      <DependentUpon>online_offline.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,14 +192,70 @@
     <Compile Include="reports.Designer.cs">
       <DependentUpon>reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="UseCases_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UseCases_1.Designer.cs">
+      <DependentUpon>UseCases_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UseCases_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UseCases_Form.Designer.cs">
+      <DependentUpon>UseCases_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UseCase_cls.cs" />
+    <Compile Include="useHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="useHome.Designer.cs">
+      <DependentUpon>useHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="useHome_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="useHome_2.Designer.cs">
+      <DependentUpon>useHome_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="useReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="useReports.Designer.cs">
+      <DependentUpon>useReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vGridControl1.cs" />
     <EmbeddedResource Include="Configurations.resx">
       <DependentUpon>Configurations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FR_LIve.resx">
+      <DependentUpon>FR_LIve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="No_Photos.resx">
+      <DependentUpon>No_Photos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object_Detectioncs.resx">
+      <DependentUpon>Object_Detectioncs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline_Violation.resx">
+      <DependentUpon>Offline_Violation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline_Violation_1.resx">
+      <DependentUpon>Offline_Violation_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online_Live.resx">
+      <DependentUpon>Online_Live.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="online_offline.resx">
+      <DependentUpon>online_offline.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -120,6 +270,21 @@
     <EmbeddedResource Include="reports.resx">
       <DependentUpon>reports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UseCases_1.resx">
+      <DependentUpon>UseCases_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UseCases_Form.resx">
+      <DependentUpon>UseCases_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="useHome.resx">
+      <DependentUpon>useHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="useHome_2.resx">
+      <DependentUpon>useHome_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="useReports.resx">
+      <DependentUpon>useReports.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="dashboardDataSet.xsc">
       <DependentUpon>dashboardDataSet.xsd</DependentUpon>
     </None>
@@ -130,6 +295,50 @@
     </None>
     <None Include="dashboardDataSet.xss">
       <DependentUpon>dashboardDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet1.xsc">
+      <DependentUpon>dashboardDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dashboardDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dashboardDataSet1.xss">
+      <DependentUpon>dashboardDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet2.xsc">
+      <DependentUpon>dashboardDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dashboardDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dashboardDataSet2.xss">
+      <DependentUpon>dashboardDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet3.xsc">
+      <DependentUpon>dashboardDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dashboardDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dashboardDataSet3.xss">
+      <DependentUpon>dashboardDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet4.xsc">
+      <DependentUpon>dashboardDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dashboardDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dashboardDataSet4.xss">
+      <DependentUpon>dashboardDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -144,6 +353,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

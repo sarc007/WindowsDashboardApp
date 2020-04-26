@@ -14,8 +14,18 @@ using DevExpress.XtraEditors;
 
 namespace WindowsDashboardApp
 {
-    public partial class Configurations : Form
+    public partial class Configurations : DevExpress.XtraEditors.XtraUserControl
     {
+        private static Configurations _instance;
+        public static Configurations Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Configurations();
+                return _instance;
+            }
+        }
         public Configurations()
         {
             InitializeComponent();
@@ -45,14 +55,14 @@ namespace WindowsDashboardApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string connetionString = null;
+            /*string connetionString = null;
             MySqlConnection cnn;
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
-            connetionString = "server=localhost;database=dashboard;uid=app_user_ks;pwd=App_user_dxb_ks2020;";
+            connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
             cnn = new MySqlConnection(connetionString);
             string insertSQL = "INSERT INTO camera_configurations (folder_fid, camera_ip_fid, camera_user_id, camera_password_fid, camera_active_id) VALUES () ";
-
+            */
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -77,9 +87,25 @@ namespace WindowsDashboardApp
 
         private void Configurations_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dashboardDataSet1.camera_configuration_tbl' table. You can move, or remove it, as needed.
+            this.camera_configuration_tblTableAdapter.Fill(this.dashboardDataSet.camera_configuration_tbl);
+            // TODO: This line of code loads data into the 'dashboardDataSet1.configuration_type_tbl' table. You can move, or remove it, as needed.
+            this.configuration_type_tblTableAdapter.Fill(this.dashboardDataSet.configuration_type_tbl);
+            // TODO: This line of code loads data into the 'dashboardDataSet1.configuration_tbl' table. You can move, or remove it, as needed.
+            this.configuration_tblTableAdapter.Fill(this.dashboardDataSet.configuration_tbl);
+            // TODO: This line of code loads data into the 'dashboardDataSet1.camera_configuration_tbl' table. You can move, or remove it, as needed.
+            this.camera_configuration_tblTableAdapter.Fill(this.dashboardDataSet.camera_configuration_tbl);
+            // TODO: This line of code loads data into the 'dashboardDataSet1.configuration_type_tbl' table. You can move, or remove it, as needed.
+            this.configuration_type_tblTableAdapter.Fill(this.dashboardDataSet.configuration_type_tbl);
+            // TODO: This line of code loads data into the 'dashboardDataSet1.configuration_tbl' table. You can move, or remove it, as needed.
+            this.configuration_tblTableAdapter.Fill(this.dashboardDataSet.configuration_tbl);
+            // TODO: This line of code loads data into the 'dashboardDataSet.camera_configuration_tbl' table. You can move, or remove it, as needed.
+            this.camera_configuration_tblTableAdapter.Fill(this.dashboardDataSet.camera_configuration_tbl);
             // TODO: This line of code loads data into the 'dashboardDataSet.configuaration_type_tbl' table. You can move, or remove it, as needed.
-            this.configuaration_type_tblTableAdapter.Fill(this.dashboardDataSet.configuaration_type_tbl);
-            // TODO: This line of code loads data into the 'dashboardDataSet.configuration_tbl' table. You can move, or remove it, as needed.
+           
+            this.configuration_tblTableAdapter.Fill(this.dashboardDataSet.configuration_tbl);
+            // TODO: This line of code loads data into the 'dashboardDataSet.configuaration_type_tbl' table. You can move, or remove it, as needed.
+            
             this.configuration_tblTableAdapter.Fill(this.dashboardDataSet.configuration_tbl);
             this.camera_configuration_tblTableAdapter.Fill(this.dashboardDataSet.camera_configuration_tbl);
             // TODO: This line of code loads data into the 'dashboardDataSet.configuaration_type_tbl' table. You can move, or remove it, as needed.
@@ -100,29 +126,12 @@ namespace WindowsDashboardApp
 
         private void controlNavigator1_ButtonClick(object sender, DevExpress.XtraEditors.NavigatorButtonClickEventArgs e)
         {
-            if (e.Button.ButtonType.ToString() != "Append")
-            {
-                update_db();
-            }
+          
         }
 
         private void gridControl1_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Up || e.KeyChar == (char)Keys.Down
-                || e.KeyChar == (char)Keys.PageUp || e.KeyChar == (char)Keys.PageDown)
-            {
-                update_db();
-            }
-            if (e.KeyChar == (char)Keys.Insert)
-            {
-                this.controlNavigator1.NavigatableControl.DoAction(NavigatorButtonType.Append);
-            }
-            if (e.KeyChar.ToString() == Keys.Delete.ToString())
-            {
-                this.controlNavigator1.NavigatableControl.DoAction(NavigatorButtonType.Remove);
-                update_db();
-            }
         }
 
         private void gridControl1_EditorKeyPress(object sender, KeyPressEventArgs e)
@@ -178,6 +187,26 @@ namespace WindowsDashboardApp
         private void configView_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             update_db();
+        }
+
+        private void vGridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void controlNavigator1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

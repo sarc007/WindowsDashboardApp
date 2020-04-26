@@ -1,6 +1,6 @@
 ﻿namespace Video_Violation
 {
-    partial class Form1
+    partial class Offline_video_1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Offline_video_1));
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.videoviewBindingSource = new System.Windows.Forms.BindingSource(this.components);

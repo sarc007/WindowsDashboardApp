@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Video_Violation
 {
-    public partial class Form2 : Form
+    public partial class Offline_video_2 : Form
     {
-        public Form2()
+        public Offline_video_2()
         {
             InitializeComponent();
         }

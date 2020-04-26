@@ -119,6 +119,7 @@
             this.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.Name = "Form1";
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
