@@ -84,6 +84,7 @@ namespace WindowsDashboardApp
             }
             if (e.Button.ButtonType.ToString() != "Remove")
             {
+                //Testing git commit
                 //MessageBox.Show(e.Button.ButtonType.ToString());
                 update_db();
             }
