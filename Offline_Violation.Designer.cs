@@ -44,7 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.sidePanel_violation = new DevExpress.XtraEditors.SidePanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.show_video = new AxWMPLib.AxWindowsMediaPlayer();
+            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.frame = new System.Windows.Forms.Panel();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             this.splitContainer1.SuspendLayout();
             this.sidePanel_violation.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.show_video)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.sidePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
@@ -71,7 +71,7 @@
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(0, 31);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1251, 904);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1251, 862);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // splitContainer1
@@ -101,8 +101,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.sidePanel_violation);
             this.splitContainer1.Panel2.Controls.Add(this.sidePanel1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1251, 904);
-            this.splitContainer1.SplitterDistance = 126;
+            this.splitContainer1.Size = new System.Drawing.Size(1251, 862);
+            this.splitContainer1.SplitterDistance = 120;
             this.splitContainer1.TabIndex = 0;
             // 
             // show_violation
@@ -145,7 +145,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(257, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "FROM DATE";
             // 
@@ -154,7 +154,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(617, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "TO DATE";
             // 
@@ -162,14 +162,14 @@
             // 
             this.toDate.Location = new System.Drawing.Point(620, 77);
             this.toDate.Name = "toDate";
-            this.toDate.Size = new System.Drawing.Size(124, 21);
+            this.toDate.Size = new System.Drawing.Size(124, 20);
             this.toDate.TabIndex = 1;
             // 
             // fromDate
             // 
             this.fromDate.Location = new System.Drawing.Point(260, 77);
             this.fromDate.Name = "fromDate";
-            this.fromDate.Size = new System.Drawing.Size(140, 21);
+            this.fromDate.Size = new System.Drawing.Size(140, 20);
             this.fromDate.TabIndex = 0;
             this.fromDate.ValueChanged += new System.EventHandler(this.fromDate_ValueChanged);
             // 
@@ -180,7 +180,7 @@
             this.flowLayout_video.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayout_video.Location = new System.Drawing.Point(279, 427);
             this.flowLayout_video.Name = "flowLayout_video";
-            this.flowLayout_video.Size = new System.Drawing.Size(37, 347);
+            this.flowLayout_video.Size = new System.Drawing.Size(37, 311);
             this.flowLayout_video.TabIndex = 5;
             // 
             // label11
@@ -226,35 +226,35 @@
             this.sidePanel_violation.Dock = System.Windows.Forms.DockStyle.Right;
             this.sidePanel_violation.Location = new System.Drawing.Point(316, 0);
             this.sidePanel_violation.Name = "sidePanel_violation";
-            this.sidePanel_violation.Size = new System.Drawing.Size(935, 774);
+            this.sidePanel_violation.Size = new System.Drawing.Size(935, 738);
             this.sidePanel_violation.TabIndex = 1;
             this.sidePanel_violation.Text = "sidePanel2";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.show_video);
+            this.panel2.Controls.Add(this.axWindowsMediaPlayer2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(465, 391);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(470, 383);
+            this.panel2.Size = new System.Drawing.Size(470, 347);
             this.panel2.TabIndex = 4;
             // 
-            // show_video
+            // axWindowsMediaPlayer2
             // 
-            this.show_video.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.show_video.Enabled = true;
-            this.show_video.Location = new System.Drawing.Point(0, 0);
-            this.show_video.Name = "show_video";
-            this.show_video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("show_video.OcxState")));
-            this.show_video.Size = new System.Drawing.Size(470, 383);
-            this.show_video.TabIndex = 0;
+            this.axWindowsMediaPlayer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axWindowsMediaPlayer2.Enabled = true;
+            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
+            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(470, 347);
+            this.axWindowsMediaPlayer2.TabIndex = 1;
             // 
             // frame
             // 
             this.frame.Dock = System.Windows.Forms.DockStyle.Left;
             this.frame.Location = new System.Drawing.Point(1, 391);
             this.frame.Name = "frame";
-            this.frame.Size = new System.Drawing.Size(464, 383);
+            this.frame.Size = new System.Drawing.Size(464, 347);
             this.frame.TabIndex = 3;
             // 
             // tablePanel1
@@ -295,7 +295,7 @@
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel1.Location = new System.Drawing.Point(0, 0);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(279, 774);
+            this.sidePanel1.Size = new System.Drawing.Size(279, 738);
             this.sidePanel1.TabIndex = 0;
             this.sidePanel1.Text = "sidePanel1";
             // 
@@ -307,7 +307,7 @@
             this.side_panel_flow_layout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.side_panel_flow_layout.Location = new System.Drawing.Point(0, 36);
             this.side_panel_flow_layout.Name = "side_panel_flow_layout";
-            this.side_panel_flow_layout.Size = new System.Drawing.Size(278, 738);
+            this.side_panel_flow_layout.Size = new System.Drawing.Size(278, 702);
             this.side_panel_flow_layout.TabIndex = 1;
             // 
             // label4
@@ -335,7 +335,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 935);
+            this.ClientSize = new System.Drawing.Size(1251, 893);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.fluentDesignFormControl1);
@@ -352,7 +352,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.sidePanel_violation.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.show_video)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.sidePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
@@ -383,6 +383,6 @@
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
         private System.Windows.Forms.Panel frame;
         private System.Windows.Forms.Panel panel2;
-        private AxWMPLib.AxWindowsMediaPlayer show_video;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
     }
 }

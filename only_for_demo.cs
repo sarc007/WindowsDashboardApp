@@ -11,11 +11,21 @@ using DevExpress.XtraEditors;
 
 namespace WindowsDashboardApp
 {
-    public partial class Online_Live : DevExpress.XtraEditors.XtraForm
+    public partial class only_for_demo : DevExpress.XtraEditors.XtraForm
     {
-        public Online_Live()
+        public only_for_demo()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void only_for_demo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,25 +17,36 @@ namespace WindowsDashboardApp
         public MainForm()
         {
             InitializeComponent();
-            if (!container.Controls.Contains(UseCases_Form.Instance))
+            //if (!container.Controls.Contains(GBMIVA.Instance))
+            //{
+            //    container.Controls.Add(GBMIVA.Instance);
+            //    GBMIVA.Instance.Dock = DockStyle.Fill;
+            //    GBMIVA.Instance.BringToFront();
+            //}
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            if (!container.Controls.Contains(GBMIVA.Instance))
             {
-                container.Controls.Add(UseCases_Form.Instance);
-                UseCases_Form.Instance.Dock = DockStyle.Fill;
-                UseCases_Form.Instance.BringToFront();
+                container.Controls.Add(GBMIVA.Instance);
+                GBMIVA.Instance.Dock = DockStyle.Fill;
+                GBMIVA.Instance.BringToFront();
             }
         }
 
         private void aceHome_Click(object sender, EventArgs e)
         {
-            if(!container.Controls.Contains(UseCases_Form.Instance))
+            if(!container.Controls.Contains(GBMIVA.Instance))
             {
-                container.Controls.Add(UseCases_Form.Instance);
-                UseCases_Form.Instance.Dock = DockStyle.Fill;
-                UseCases_Form.Instance.BringToFront();
+                container.Controls.Add(GBMIVA.Instance);
+                GBMIVA.Instance.Dock = DockStyle.Fill;
+                GBMIVA.Instance.BringToFront();
             }
-            container.Controls.Add(UseCases_Form.Instance);
-            UseCases_Form.Instance.Dock = DockStyle.Fill;
-            UseCases_Form.Instance.BringToFront();
+            container.Controls.Add(GBMIVA.Instance);
+            GBMIVA.Instance.Dock = DockStyle.Fill;
+            GBMIVA.Instance.BringToFront();
         }
 
         private void aceConfig_Click(object sender, EventArgs e)
@@ -67,5 +78,7 @@ namespace WindowsDashboardApp
         {
             Application.Exit();
         }
+
+        
     }
 }

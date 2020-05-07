@@ -18,8 +18,8 @@ namespace WindowsDashboardApp
         {
             InitializeComponent();
         }
+
         private static int config_type = -1;
-        //private void set_config_type
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -182,7 +182,7 @@ namespace WindowsDashboardApp
                 row.Close();
             }
 
-            Label[] label_violation = new Label[violation_video_path_list.Count * 3];
+            SimpleButton[] label_violation = new SimpleButton[violation_video_path_list.Count * 3];
             var srno = 1;
 
             for (int x = 0; x < violation_video_path_list.Count; x++)
@@ -191,11 +191,11 @@ namespace WindowsDashboardApp
                 {
                     var rowValue = 1;
                     var colValue = 0; 
-                    label_violation[x] = new Label();
+                    label_violation[x] = new SimpleButton();
                     label_violation[x].Dock = System.Windows.Forms.DockStyle.Top;
-                    label_violation[x].TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                    label_violation[x].Size = new System.Drawing.Size(140, 47);
-                    label_violation[x].BorderStyle = BorderStyle.FixedSingle;
+                    //label_violation[x].TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                    //label_violation[x].Size = new System.Drawing.Size(140, 47);
+                    //label_violation[x].BorderStyle = BorderStyle.FixedSingle;
 
                     if (y == 0)
                     {
@@ -251,7 +251,8 @@ namespace WindowsDashboardApp
 
         private void play_video(object sender, EventArgs e)
         {
-            this.show_video.URL = (sender as Label).Text.ToString();
+            this.axWindowsMediaPlayer2.URL = (sender as SimpleButton).Text.ToString();
+            
         }
 
         private void site_click(object sender, EventArgs e)
@@ -403,11 +404,6 @@ namespace WindowsDashboardApp
 
         private void filter_violation(object sender, EventArgs e)
         {
-            //            for (int i = dashboardTableItemsWrapper.Count - 1; i >= 0; --i) 
-            //     dashboardTableItemsWrapper[i].Dispose();
-
-            //dashboardTableItemsWrapper.Controls.Clear(); 
-            //dashboardTableItemsWrapper.RowCount = 0;
             tablePanel1.Controls.Clear();
 
             int video_id = (int)(sender as Label).Tag;
@@ -434,7 +430,7 @@ namespace WindowsDashboardApp
             }
             row.Close();
 
-            Label[] label_violation = new Label[violation_video_path_list.Count * 3];
+            SimpleButton[] label_violation = new SimpleButton[violation_video_path_list.Count * 3];
             var srno = 1;
 
             for (int x = 0; x < violation_video_path_list.Count; x++)
@@ -443,10 +439,9 @@ namespace WindowsDashboardApp
                 {
                     var rowValue = 1;
                     var colValue = 0;
-                    label_violation[x] = new Label();
+                    label_violation[x] = new SimpleButton();
                     label_violation[x].Dock = System.Windows.Forms.DockStyle.Top;
-                    label_violation[x].TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                    label_violation[x].Size = new System.Drawing.Size(140, 47);
+                    //label_violation[x].Size = new System.Drawing.Size(140, 47);
 
                     if (y == 0)
                     {
@@ -504,7 +499,7 @@ namespace WindowsDashboardApp
         private void show_frame(object sender, EventArgs e)
         {
             this.frame.Controls.Clear();
-            var image_path = (sender as Label).Text.ToString();
+            var image_path = (sender as SimpleButton).Text.ToString();
             PictureBox picture = new PictureBox
             {
                 Name = "show_frame_path",

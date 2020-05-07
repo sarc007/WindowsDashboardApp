@@ -89,13 +89,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration.cs" />
-    <Compile Include="Configurations.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Configurations.Designer.cs">
-      <DependentUpon>Configurations.cs</DependentUpon>
-    </Compile>
     <Compile Include="dashboardDataSet.cs">
       <DependentUpon>dashboardDataSet.xsd</DependentUpon>
     </Compile>
@@ -124,6 +117,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dashboardDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dashboardDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dashboardDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dashboardDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +139,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FR_LIve.cs">
-      <SubType>Form</SubType>
+    <Compile Include="GBMIVA.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FR_LIve.Designer.cs">
-      <DependentUpon>FR_LIve.cs</DependentUpon>
+    <Compile Include="GBMIVA.Designer.cs">
+      <DependentUpon>GBMIVA.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -148,41 +151,17 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="No_Photos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="No_Photos.Designer.cs">
-      <DependentUpon>No_Photos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Object_Detectioncs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Object_Detectioncs.Designer.cs">
-      <DependentUpon>Object_Detectioncs.cs</DependentUpon>
-    </Compile>
     <Compile Include="Offline_Violation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Offline_Violation.Designer.cs">
       <DependentUpon>Offline_Violation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Offline_Violation_1.cs">
+    <Compile Include="only_for_demo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Offline_Violation_1.Designer.cs">
-      <DependentUpon>Offline_Violation_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Online_Live.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Online_Live.Designer.cs">
-      <DependentUpon>Online_Live.cs</DependentUpon>
-    </Compile>
-    <Compile Include="online_offline.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="online_offline.Designer.cs">
-      <DependentUpon>online_offline.cs</DependentUpon>
+    <Compile Include="only_for_demo.Designer.cs">
+      <DependentUpon>only_for_demo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -204,19 +183,6 @@
     <Compile Include="UseCases_Form.Designer.cs">
       <DependentUpon>UseCases_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="UseCase_cls.cs" />
-    <Compile Include="useHome.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="useHome.Designer.cs">
-      <DependentUpon>useHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="useHome_2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="useHome_2.Designer.cs">
-      <DependentUpon>useHome_2.cs</DependentUpon>
-    </Compile>
     <Compile Include="useReports.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -224,38 +190,23 @@
       <DependentUpon>useReports.cs</DependentUpon>
     </Compile>
     <Compile Include="vGridControl1.cs" />
-    <EmbeddedResource Include="Configurations.resx">
-      <DependentUpon>Configurations.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FR_LIve.resx">
-      <DependentUpon>FR_LIve.cs</DependentUpon>
+    <EmbeddedResource Include="GBMIVA.resx">
+      <DependentUpon>GBMIVA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="No_Photos.resx">
-      <DependentUpon>No_Photos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Object_Detectioncs.resx">
-      <DependentUpon>Object_Detectioncs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Offline_Violation.resx">
       <DependentUpon>Offline_Violation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Offline_Violation_1.resx">
-      <DependentUpon>Offline_Violation_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Online_Live.resx">
-      <DependentUpon>Online_Live.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="online_offline.resx">
-      <DependentUpon>online_offline.cs</DependentUpon>
+    <EmbeddedResource Include="only_for_demo.resx">
+      <DependentUpon>only_for_demo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -275,12 +226,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UseCases_Form.resx">
       <DependentUpon>UseCases_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="useHome.resx">
-      <DependentUpon>useHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="useHome_2.resx">
-      <DependentUpon>useHome_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="useReports.resx">
       <DependentUpon>useReports.cs</DependentUpon>
@@ -340,6 +285,28 @@
     <None Include="dashboardDataSet4.xss">
       <DependentUpon>dashboardDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="dashboardDataSet5.xsc">
+      <DependentUpon>dashboardDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dashboardDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dashboardDataSet5.xss">
+      <DependentUpon>dashboardDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet6.xsc">
+      <DependentUpon>dashboardDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="dashboardDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dashboardDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dashboardDataSet6.xss">
+      <DependentUpon>dashboardDataSet6.xsd</DependentUpon>
+    </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -355,6 +322,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="AxAXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="AxWMPLib">
       <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
       <VersionMajor>1</VersionMajor>

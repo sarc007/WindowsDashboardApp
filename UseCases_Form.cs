@@ -30,9 +30,8 @@ namespace WindowsDashboardApp
             InitializeComponent();
         }
 
-
         private void UseCases_Form_Load(object sender, EventArgs e)
-        {
+        { 
             string connetionString = null;
             MySqlConnection cnn;
             MySqlDataReader row;
