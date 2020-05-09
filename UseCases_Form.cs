@@ -100,7 +100,7 @@ namespace WindowsDashboardApp
                 simple_btns[buttons_count].Text = "OFFLINE";
                 simple_btns[buttons_count].Tag = config_type_id[x]; // add id value
                 simple_btns[buttons_count].Click += new System.EventHandler(this.simpleButton_Click);
-                simple_btns[buttons_count].Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+                simple_btns[buttons_count].Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
                 simple_btns[buttons_count].Appearance.Options.UseForeColor = true;
                 //
                 // Simplebtn2
@@ -112,7 +112,7 @@ namespace WindowsDashboardApp
                 simple_btns[buttons_count + 1].TabIndex = buttons_count + 1;
                 simple_btns[buttons_count + 1].Text = "LIVE CAMERA";
                 simple_btns[buttons_count + 1].Click += new System.EventHandler(this.simpleButton2_Click);
-                simple_btns[buttons_count + 1].Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+                simple_btns[buttons_count + 1].Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
                 simple_btns[buttons_count + 1].Appearance.Options.UseForeColor = true;
                 //
                 // Label
@@ -125,7 +125,7 @@ namespace WindowsDashboardApp
                 temp.TabIndex = tab_index_var + 2;
                 temp.Text = buttons[x].ToString();
                 temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                temp.ForeColor = System.Drawing.Color.Black;
+                temp.ForeColor = System.Drawing.Color.BlueViolet;
                 temp.Show();
                 labels.Add(temp);
                 //

@@ -41,8 +41,17 @@ namespace WindowsDashboardApp
             cmd = new MySqlCommand(query_to_get_btn, cnn);
             row = cmd.ExecuteReader();
 
+            string query_to_get_counts = "SELECT * FROM gbm_iva_summary_view;";
+            cmd = new MySqlCommand(query_to_get_counts, cnn);
+            //row1 = cmd.ExecuteReader();
+
             List<string> gbm_iva_name = new List<string>();
             List<string> gbm_iva_img_path = new List<string>();
+            List<int> usecase_count = new List<int>();
+            List<int> site_count = new List<int>();
+            List<int> camera_count = new List<int>();
+            List<int> video_count = new List<int>();
+            List<int> violation_count = new List<int>();
 
 
             while (row.Read())
@@ -76,7 +85,7 @@ namespace WindowsDashboardApp
                 use_case_pictures[i].Click += new System.EventHandler(this.gbm_picture_click);
                 use_case_pictures[i].MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
                 use_case_pictures[i].MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-
+                use_case_pictures[i].MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
 
                 //
                 //
@@ -112,11 +121,17 @@ namespace WindowsDashboardApp
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            (sender as PictureBox).BackColor = Color.FromArgb(150, Color.BlueViolet);
+            (sender as PictureBox).BackColor = Color.FromArgb(150, Color.White);
+        }
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            (sender as PictureBox).BorderStyle = BorderStyle.Fixed3D;
+            (sender as PictureBox).BackColor = Color.FromArgb(150, Color.White);
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
+            (sender as PictureBox).BorderStyle = BorderStyle.None;
             (sender as PictureBox).BackColor = Color.Black;
         }
 
