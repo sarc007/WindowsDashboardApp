@@ -22,6 +22,7 @@ namespace WindowsDashboardApp
 
         private void UseCases_1_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             label1.Text = UseCases_Form.UseCases;
             label1.Font = new System.Drawing.Font("Tahoma", 20F);
 

@@ -43,7 +43,7 @@
             this.colactive_fld1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.configurationtypetblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKgbmivaconfigtypeidBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colconfiguration_description_fld = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colconfiguration_remarks_fld = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,10 +85,10 @@
             this.colcamera_port_no_fid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcamera_active_fid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colconfig_id_fld = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gbm_ivaTableAdapter = new WindowsDashboardApp.dashboardDataSetTableAdapters.gbm_ivaTableAdapter();
             this.configuration_type_tblTableAdapter = new WindowsDashboardApp.dashboardDataSetTableAdapters.configuration_type_tblTableAdapter();
             this.configuration_tblTableAdapter = new WindowsDashboardApp.dashboardDataSetTableAdapters.configuration_tblTableAdapter();
             this.camera_configuration_tblTableAdapter = new WindowsDashboardApp.dashboardDataSetTableAdapters.camera_configuration_tblTableAdapter();
-            this.gbm_ivaTableAdapter = new WindowsDashboardApp.dashboardDataSetTableAdapters.gbm_ivaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
@@ -103,7 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationtypetblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKgbmivaconfigtypeidBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
@@ -175,8 +175,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridControl3);
-            this.splitContainer1.Size = new System.Drawing.Size(1127, 212);
-            this.splitContainer1.SplitterDistance = 51;
+            this.splitContainer1.Size = new System.Drawing.Size(1127, 229);
+            this.splitContainer1.SplitterDistance = 44;
             this.splitContainer1.TabIndex = 1;
             // 
             // controlNavigator4
@@ -184,11 +184,11 @@
             this.controlNavigator4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.controlNavigator4.CustomButtons.AddRange(new DevExpress.XtraEditors.NavigatorCustomButton[] {
             new DevExpress.XtraEditors.NavigatorCustomButton(7)});
-            this.controlNavigator4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlNavigator4.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlNavigator4.Location = new System.Drawing.Point(0, 0);
             this.controlNavigator4.Name = "controlNavigator4";
             this.controlNavigator4.NavigatableControl = this.gridControl3;
-            this.controlNavigator4.Size = new System.Drawing.Size(1127, 51);
+            this.controlNavigator4.Size = new System.Drawing.Size(1127, 29);
             this.controlNavigator4.TabIndex = 0;
             this.controlNavigator4.Text = "controlNavigator4";
             this.controlNavigator4.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.controlNavigator4_ButtonClick);
@@ -202,12 +202,13 @@
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit2});
-            this.gridControl3.Size = new System.Drawing.Size(1127, 157);
+            this.gridControl3.Size = new System.Drawing.Size(1127, 181);
             this.gridControl3.TabIndex = 0;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             this.gridControl3.EditorKeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl3_EditorKeyPress);
             this.gridControl3.Click += new System.EventHandler(this.gridControl3_Click);
+            this.gridControl3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridControl3_KeyDown);
             // 
             // gbmivaBindingSource
             // 
@@ -262,17 +263,17 @@
             // 
             this.controlNavigator1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.controlNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.controlNavigator1.Location = new System.Drawing.Point(0, 212);
+            this.controlNavigator1.Location = new System.Drawing.Point(0, 229);
             this.controlNavigator1.Name = "controlNavigator1";
             this.controlNavigator1.NavigatableControl = this.gridControl1;
-            this.controlNavigator1.Size = new System.Drawing.Size(1127, 46);
+            this.controlNavigator1.Size = new System.Drawing.Size(1127, 29);
             this.controlNavigator1.TabIndex = 0;
             this.controlNavigator1.Text = "controlNavigator1";
             this.controlNavigator1.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.controlNavigator1_ButtonClick);
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.configurationtypetblBindingSource;
+            this.gridControl1.DataSource = this.fKgbmivaconfigtypeidBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -296,10 +297,10 @@
             this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             this.gridControl1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl1_EditorKeyPress);
             // 
-            // configurationtypetblBindingSource
+            // fKgbmivaconfigtypeidBindingSource
             // 
-            this.configurationtypetblBindingSource.DataMember = "configuration_type_tbl";
-            this.configurationtypetblBindingSource.DataSource = this.dashboardDataSet;
+            this.fKgbmivaconfigtypeidBindingSource.DataMember = "FK_gbm_iva_config_type_id";
+            this.fKgbmivaconfigtypeidBindingSource.DataSource = this.gbmivaBindingSource;
             // 
             // gridView1
             // 
@@ -509,7 +510,7 @@
             // fkconfigtblconfigtypetblBindingSource
             // 
             this.fkconfigtblconfigtypetblBindingSource.DataMember = "fk_config_tbl_config_type_tbl";
-            this.fkconfigtblconfigtypetblBindingSource.DataSource = this.configurationtypetblBindingSource;
+            this.fkconfigtblconfigtypetblBindingSource.DataSource = this.fKgbmivaconfigtypeidBindingSource;
             // 
             // rowID
             // 
@@ -580,17 +581,17 @@
             this.splitContainerControl5.Panel2.Controls.Add(this.gridControl2);
             this.splitContainerControl5.Panel2.Text = "Panel2";
             this.splitContainerControl5.Size = new System.Drawing.Size(1131, 207);
-            this.splitContainerControl5.SplitterPosition = 48;
+            this.splitContainerControl5.SplitterPosition = 32;
             this.splitContainerControl5.TabIndex = 0;
             // 
             // controlNavigator3
             // 
             this.controlNavigator3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.controlNavigator3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlNavigator3.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlNavigator3.Location = new System.Drawing.Point(0, 0);
             this.controlNavigator3.Name = "controlNavigator3";
             this.controlNavigator3.NavigatableControl = this.gridControl2;
-            this.controlNavigator3.Size = new System.Drawing.Size(1123, 44);
+            this.controlNavigator3.Size = new System.Drawing.Size(1123, 29);
             this.controlNavigator3.TabIndex = 1;
             this.controlNavigator3.Text = "controlNavigator3";
             this.controlNavigator3.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.controlNavigator3_ButtonClick);
@@ -603,7 +604,7 @@
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.cardView1;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1123, 141);
+            this.gridControl2.Size = new System.Drawing.Size(1123, 157);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.cardView1});
@@ -702,6 +703,10 @@
             this.colconfig_id_fld.VisibleIndex = 7;
             this.colconfig_id_fld.Width = 87;
             // 
+            // gbm_ivaTableAdapter
+            // 
+            this.gbm_ivaTableAdapter.ClearBeforeFill = true;
+            // 
             // configuration_type_tblTableAdapter
             // 
             this.configuration_type_tblTableAdapter.ClearBeforeFill = true;
@@ -713,10 +718,6 @@
             // camera_configuration_tblTableAdapter
             // 
             this.camera_configuration_tblTableAdapter.ClearBeforeFill = true;
-            // 
-            // gbm_ivaTableAdapter
-            // 
-            this.gbm_ivaTableAdapter.ClearBeforeFill = true;
             // 
             // Form2
             // 
@@ -741,7 +742,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationtypetblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKgbmivaconfigtypeidBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
@@ -798,12 +799,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private System.Windows.Forms.BindingSource configurationtypetblBindingSource;
-        private dashboardDataSetTableAdapters.configuration_type_tblTableAdapter configuration_type_tblTableAdapter;
-        private System.Windows.Forms.BindingSource fkconfigtblconfigtypetblBindingSource;
-        private dashboardDataSetTableAdapters.configuration_tblTableAdapter configuration_tblTableAdapter;
-        private System.Windows.Forms.BindingSource fkcameraconfigtblconfigtblBindingSource;
-        private dashboardDataSetTableAdapters.camera_configuration_tblTableAdapter camera_configuration_tblTableAdapter;
         private DevExpress.XtraGrid.Views.Card.CardView cardView1;
         private DevExpress.XtraGrid.Columns.GridColumn colID1;
         private DevExpress.XtraGrid.Columns.GridColumn colfolder_fid;
@@ -822,13 +817,19 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit repositoryItemColorPickEdit1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private DevExpress.XtraEditors.ControlNavigator controlNavigator4;
-        private System.Windows.Forms.BindingSource gbmivaBindingSource;
-        private dashboardDataSetTableAdapters.gbm_ivaTableAdapter gbm_ivaTableAdapter;
         private DevExpress.XtraGrid.GridControl gridControl3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colImage_path1;
         private DevExpress.XtraGrid.Columns.GridColumn colactive_fld1;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
+        private System.Windows.Forms.BindingSource gbmivaBindingSource;
+        private System.Windows.Forms.BindingSource fKgbmivaconfigtypeidBindingSource;
+        private System.Windows.Forms.BindingSource fkconfigtblconfigtypetblBindingSource;
+        private System.Windows.Forms.BindingSource fkcameraconfigtblconfigtblBindingSource;
+        private dashboardDataSetTableAdapters.gbm_ivaTableAdapter gbm_ivaTableAdapter;
+        private dashboardDataSetTableAdapters.configuration_type_tblTableAdapter configuration_type_tblTableAdapter;
+        private dashboardDataSetTableAdapters.configuration_tblTableAdapter configuration_tblTableAdapter;
+        private dashboardDataSetTableAdapters.camera_configuration_tblTableAdapter camera_configuration_tblTableAdapter;
     }
 }

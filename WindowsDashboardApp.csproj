@@ -97,36 +97,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dashboardDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dashboardDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dashboardDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dashboardDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dashboardDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dashboardDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dashboardDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dashboardDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dashboardDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dashboardDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dashboardDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dashboardDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dashboardDataSet6.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,7 +148,7 @@
       <DependentUpon>UseCases_1.cs</DependentUpon>
     </Compile>
     <Compile Include="UseCases_Form.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="UseCases_Form.Designer.cs">
       <DependentUpon>UseCases_Form.cs</DependentUpon>
@@ -240,72 +210,6 @@
     </None>
     <None Include="dashboardDataSet.xss">
       <DependentUpon>dashboardDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet1.xsc">
-      <DependentUpon>dashboardDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dashboardDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dashboardDataSet1.xss">
-      <DependentUpon>dashboardDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet2.xsc">
-      <DependentUpon>dashboardDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dashboardDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dashboardDataSet2.xss">
-      <DependentUpon>dashboardDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet3.xsc">
-      <DependentUpon>dashboardDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dashboardDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dashboardDataSet3.xss">
-      <DependentUpon>dashboardDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet4.xsc">
-      <DependentUpon>dashboardDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dashboardDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dashboardDataSet4.xss">
-      <DependentUpon>dashboardDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet5.xsc">
-      <DependentUpon>dashboardDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dashboardDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dashboardDataSet5.xss">
-      <DependentUpon>dashboardDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet6.xsc">
-      <DependentUpon>dashboardDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="dashboardDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dashboardDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dashboardDataSet6.xss">
-      <DependentUpon>dashboardDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

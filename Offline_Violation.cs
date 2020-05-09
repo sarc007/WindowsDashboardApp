@@ -28,6 +28,7 @@ namespace WindowsDashboardApp
 
         private void Offline_Violation_Load(object sender, EventArgs e)
         {
+            toDate.Value = DateTime.Today.AddDays(+1);
             this.WindowState = FormWindowState.Maximized;
             label3.Text = UseCases_Form.UseCases;
             label3.Font = new System.Drawing.Font("Tahoma", 20F);
@@ -132,10 +133,11 @@ namespace WindowsDashboardApp
             List<string> video_path_list = new List<string>();
             List<string> video_name_list = new List<string>();
 
+
             for (int i = 0; i < camera_config_ID.Count; i++)
             {
                 //SELECT * FROM dashboard.videos where camer_config_id = 8;
-                string query_for_video_list = "SELECT * FROM videos where camer_config_id = '" + camera_config_ID[i] + "';";
+                string query_for_video_list = "SELECT * FROM videos where camera_config_id = '" + camera_config_ID[i] + "';";
                 cmd = new MySqlCommand(query_for_video_list, cnn);
                 row = cmd.ExecuteReader();
                 while (row.Read())
@@ -154,7 +156,7 @@ namespace WindowsDashboardApp
             {
                 label_select_video[j] = new Label();
                 label_select_video[j].Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                label_select_video[j].Name = camera_ips[j];
+                label_select_video[j].Name = video_name_list[j];
                 label_select_video[j].Size = new System.Drawing.Size(160, 120);
                 label_select_video[j].TabIndex = j;
                 label_select_video[j].Tag = id_list[j];
@@ -278,7 +280,7 @@ namespace WindowsDashboardApp
             }
             row.Close();
 
-            string filter_camera = "SELECT distinct id FROM dashboard.camera_view where config_id_fld = " + site_no + " and violation_datetime_fld between '" + fromDate.Value.ToString("yyyy-MM-dd") + "' and '" + toDate.Value.ToString("yyyy-MM-dd") + "'; ";
+            string filter_camera = "SELECT distinct ID FROM dashboard.camera_view where config_id_fld = " + site_no + " and violation_datetime_fld between '" + fromDate.Value.ToString("yyyy-MM-dd") + "' and '" + toDate.Value.ToString("yyyy-MM-dd") + "'; ";
             cmd = new MySqlCommand(filter_camera, cnn);
             row = cmd.ExecuteReader();
             List<string> camera_list = new List<string>();
@@ -288,7 +290,9 @@ namespace WindowsDashboardApp
                 camera_list.Add(row["id"].ToString());
             }
             row.Close();
-            
+
+            //MessageBox.Show(camera_list.Count.ToString()); 
+
             List<string> camera_ips = new List<string>();
             List<string> camera_users = new List<string>();
             List<string> camera_pwds = new List<string>();

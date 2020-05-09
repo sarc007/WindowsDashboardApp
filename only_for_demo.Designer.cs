@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labeltext = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,7 +66,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.labeltext);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(50, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(50);
@@ -74,20 +74,21 @@
             this.panel1.Size = new System.Drawing.Size(174, 136);
             this.panel1.TabIndex = 3;
             // 
-            // label2
+            // labeltext
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(0, 98);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "OIL & GAS";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.UseMnemonic = false;
+            this.labeltext.AutoSize = true;
+            this.labeltext.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labeltext.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labeltext.Location = new System.Drawing.Point(0, 98);
+            this.labeltext.Margin = new System.Windows.Forms.Padding(0);
+            this.labeltext.Name = "labeltext";
+            this.labeltext.Size = new System.Drawing.Size(94, 19);
+            this.labeltext.TabIndex = 1;
+            this.labeltext.Text = "OIL & GAS";
+            this.labeltext.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labeltext.UseMnemonic = false;
+            this.labeltext.MouseHover += new System.EventHandler(this.label2_MouseHover);
             // 
             // pictureBox1
             // 
@@ -99,6 +100,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // only_for_demo
             // 
@@ -123,7 +125,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labeltext;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

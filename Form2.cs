@@ -192,21 +192,21 @@ namespace WindowsDashboardApp
 
         }
 
-        private void delete_config_tbl_records(object sender)
-        {
-            VGridControl vGrid = sender as VGridControl;
-            BindingSource bindingSource = vGrid.DataSource as BindingSource;
-            if (bindingSource != null)
-            {
-                DataRowView sourceView = bindingSource.Current as DataRowView;
-                DialogResult result = MessageBox.Show("Delete record?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    sourceView.Delete();
-                    update_db();
-                }
-            }
-        }
+        //private void delete_config_tbl_records(object sender)
+        //{
+        //    VGridControl vGrid = sender as VGridControl;
+        //    BindingSource bindingSource = vGrid.DataSource as BindingSource;
+        //    if (bindingSource != null)
+        //    {
+        //        DataRowView sourceView = bindingSource.Current as DataRowView;
+        //        DialogResult result = MessageBox.Show("Delete record?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //        if (result == DialogResult.Yes)
+        //        {
+        //            sourceView.Delete();
+        //            update_db();
+        //        }
+        //    }
+        //}
         private void gridControl1_Click(object sender, EventArgs e)
         {
 
@@ -333,6 +333,26 @@ namespace WindowsDashboardApp
             {
                 this.controlNavigator4.NavigatableControl.DoAction(NavigatorButtonType.Remove);
                 update_db();
+            }
+        }
+
+        private void gridControl3_KeyDown(object sender, KeyEventArgs e)
+        {
+            GridControl gridControl = sender as GridControl;
+            if (e.KeyCode == Keys.Delete)
+            {
+                //VGridControl vGrid = vGridControl1 as VGridControl;
+                BindingSource bindingSource = gridControl.DataSource as BindingSource;
+                if (bindingSource != null)
+                {
+                    DataRowView sourceView = bindingSource.Current as DataRowView;
+                    DialogResult result = MessageBox.Show("Delete record?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        sourceView.Delete();
+                        update_db();
+                    }
+                }
             }
         }
     }

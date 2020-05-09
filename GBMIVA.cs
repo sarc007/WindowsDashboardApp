@@ -68,12 +68,16 @@ namespace WindowsDashboardApp
                 use_case_pictures[i] = new PictureBox();
                 use_case_pictures[i].Dock = System.Windows.Forms.DockStyle.Top;
                 use_case_pictures[i].Image = Image.FromFile(gbm_iva_img_path[i]);
-                use_case_pictures[i].Name = gbm_iva_name[i].ToString() + "_pictureBox";
+                use_case_pictures[i].Name = gbm_iva_name[i].ToString();
                 use_case_pictures[i].Size = new System.Drawing.Size(175, 100);
                 use_case_pictures[i].SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
                 //use_case_pictures[i].TabIndex = 0;
                 use_case_pictures[i].TabStop = false;
                 use_case_pictures[i].Click += new System.EventHandler(this.gbm_picture_click);
+                use_case_pictures[i].MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+                use_case_pictures[i].MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+
+
                 //
                 //
                 var temp = new Label();
@@ -81,14 +85,14 @@ namespace WindowsDashboardApp
                 temp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 temp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                 temp.Location = new System.Drawing.Point(0, 98);
-                temp.Name = "label_" + i.ToString();
+                temp.Name = gbm_iva_name[i].ToString();
                 temp.Size = new System.Drawing.Size(175, 40);
                 temp.Text = gbm_iva_name[i].ToUpper();
                 temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 temp.UseMnemonic = false;
                 temp.Click += new System.EventHandler(this.gbm_label_click);
-
-
+                temp.MouseHover += new System.EventHandler(this.label2_MouseHover);
+                temp.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
 
 
                 use_case_panels[i].Controls.Add(use_case_pictures[i]);
@@ -100,14 +104,46 @@ namespace WindowsDashboardApp
             //this.pictureBox1.Location = new System.Drawing.Point(0, 0);
         }
 
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+            (sender as Label).BackColor = Color.Black;
+            (sender as Label).ForeColor = Color.Aqua;
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            (sender as PictureBox).BackColor = Color.FromArgb(150, Color.BlueViolet);
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            (sender as PictureBox).BackColor = Color.Black;
+        }
+
+        private void label2_MouseHover(object sender, EventArgs e)
+        {
+            //MessageBox.Show(sender.GetType().ToString());
+            (sender as Label).BackColor = Color.LightYellow;
+            (sender as Label).ForeColor = Color.Black;
+        }
+
         private void gbm_label_click(object sender, EventArgs e)
         {
-            MessageBox.Show((sender as Label).Name.ToString());
+            //MessageBox.Show((sender as Label).Name.ToString());
+            UseCases_Form = (sender as Label).Name;
+            UseCases_Form ucf = new UseCases_Form();
+            ucf.Show();
         }
+
+        public static string UseCases_Form = "";
 
         private void gbm_picture_click(object sender, EventArgs e)
         {
-            MessageBox.Show((sender as PictureBox).Name.ToString());
+            //MessageBox.Show((sender as PictureBox).Name.ToString()
+            UseCases_Form = (sender as PictureBox).Name;
+            UseCases_Form usecases_form = new UseCases_Form();
+            usecases_form.Show();
+
         }
 
 

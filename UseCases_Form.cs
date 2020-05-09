@@ -13,33 +13,35 @@ using MySql.Data;
 
 namespace WindowsDashboardApp
 {
-    public partial class UseCases_Form : DevExpress.XtraEditors.XtraUserControl
+    public partial class UseCases_Form : XtraForm
     {
-        private static UseCases_Form _instance;
-        public static UseCases_Form Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new UseCases_Form();
-                return _instance;
-            }
-        }
         public UseCases_Form()
         {
             InitializeComponent();
         }
 
         private void UseCases_Form_Load(object sender, EventArgs e)
-        { 
+        {
+            this.WindowState = FormWindowState.Maximized;
             string connetionString = null;
             MySqlConnection cnn;
+            var gbm_iva_id = 0;
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
             connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
             cnn = new MySqlConnection(connetionString);
             cnn.Open();
-            string query = "SELECT * FROM configuration_type_tbl WHERE active_fld = 1;";
+
+            string get_gbm_iva_id = "SELECT ID FROM gbm_iva where Name = '" + GBMIVA.UseCases_Form + "';";
+            cmd = new MySqlCommand(get_gbm_iva_id, cnn);
+            row = cmd.ExecuteReader();
+            while (row.Read())
+            {
+                gbm_iva_id = Convert.ToInt32(row["ID"].ToString());
+            }
+            row.Close();
+
+            string query = "SELECT * FROM configuration_type_tbl WHERE fk_gbm_iva_id = " + gbm_iva_id + ";";
             cmd = new MySqlCommand(query, cnn);
             row = cmd.ExecuteReader();
             var count_of_records = 0;
@@ -177,6 +179,11 @@ namespace WindowsDashboardApp
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
