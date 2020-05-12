@@ -17,12 +17,6 @@ namespace WindowsDashboardApp
         public MainForm()
         {
             InitializeComponent();
-            //if (!container.Controls.Contains(GBMIVA.Instance))
-            //{
-            //    container.Controls.Add(GBMIVA.Instance);
-            //    GBMIVA.Instance.Dock = DockStyle.Fill;
-            //    GBMIVA.Instance.BringToFront();
-            //}
         }
 
         private void MainForm_Load(object sender, EventArgs e)

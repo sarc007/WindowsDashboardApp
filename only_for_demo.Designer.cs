@@ -76,14 +76,13 @@
             // 
             // labeltext
             // 
-            this.labeltext.AutoSize = true;
             this.labeltext.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labeltext.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeltext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labeltext.Location = new System.Drawing.Point(0, 98);
             this.labeltext.Margin = new System.Windows.Forms.Padding(0);
             this.labeltext.Name = "labeltext";
-            this.labeltext.Size = new System.Drawing.Size(94, 19);
+            this.labeltext.Size = new System.Drawing.Size(174, 38);
             this.labeltext.TabIndex = 1;
             this.labeltext.Text = "OIL & GAS";
             this.labeltext.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,7 +113,6 @@
             this.Load += new System.EventHandler(this.only_for_demo_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
