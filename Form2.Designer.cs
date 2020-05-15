@@ -195,6 +195,9 @@
             // 
             // gridControl3
             // 
+            this.gridControl3.AllowRestoreSelectionAndFocusedRow = DevExpress.Utils.DefaultBoolean.True;
+            this.gridControl3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gridControl3.DataMember = null;
             this.gridControl3.DataSource = this.gbmivaBindingSource;
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl3.Location = new System.Drawing.Point(0, 0);
@@ -207,6 +210,7 @@
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             this.gridControl3.EditorKeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl3_EditorKeyPress);
+            this.gridControl3.BackColorChanged += new System.EventHandler(this.gridControl3_BackColorChanged);
             this.gridControl3.Click += new System.EventHandler(this.gridControl3_Click);
             this.gridControl3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridControl3_KeyDown);
             // 
@@ -226,6 +230,7 @@
             this.colName,
             this.colImage_path1,
             this.colactive_fld1});
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView2.GridControl = this.gridControl3;
             this.gridView2.Name = "gridView2";
             // 

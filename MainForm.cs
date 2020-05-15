@@ -21,6 +21,7 @@ namespace WindowsDashboardApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Refresh();
             this.WindowState = FormWindowState.Maximized;
             if (!container.Controls.Contains(GBMIVA.Instance))
             {
@@ -31,16 +32,11 @@ namespace WindowsDashboardApp
         }
 
         private void aceHome_Click(object sender, EventArgs e)
-        {
-            if(!container.Controls.Contains(GBMIVA.Instance))
-            {
-                container.Controls.Add(GBMIVA.Instance);
-                GBMIVA.Instance.Dock = DockStyle.Fill;
-                GBMIVA.Instance.BringToFront();
-            }
-            container.Controls.Add(GBMIVA.Instance);
-            GBMIVA.Instance.Dock = DockStyle.Fill;
-            GBMIVA.Instance.BringToFront();
+        {  
+            container.Controls.Clear();
+            GBMIVA gbm = new GBMIVA();
+            gbm.Dock = DockStyle.Fill;
+            container.Controls.Add(gbm);
         }
 
         private void aceConfig_Click(object sender, EventArgs e)

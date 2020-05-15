@@ -57,6 +57,7 @@
             this.label1.Size = new System.Drawing.Size(1254, 85);
             this.label1.TabIndex = 1;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Visible = false;
             // 
             // GBMIVA
             // 

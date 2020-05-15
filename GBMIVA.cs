@@ -23,14 +23,15 @@ namespace WindowsDashboardApp
                     _instance = new GBMIVA();
                 return _instance;
             }
+           
         }
         public GBMIVA()
         {
             InitializeComponent();
         }
+        public void load_form() {
 
-        private void GBMIVA_Load(object sender, EventArgs e)
-        {
+            
             string connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
@@ -82,7 +83,7 @@ namespace WindowsDashboardApp
             Panel[] use_case_panels = new Panel[gbm_iva_name.Count];
             PictureBox[] use_case_pictures = new PictureBox[gbm_iva_name.Count];
 
-            for (int i  = 0; i < gbm_iva_name.Count; i++)
+            for (int i = 0; i < gbm_iva_name.Count; i++)
             {
                 use_case_panels[i] = new Panel();
                 use_case_panels[i].Margin = new System.Windows.Forms.Padding(50);
@@ -127,8 +128,13 @@ namespace WindowsDashboardApp
 
                 this.gbm_usecases_flow_layout.Controls.Add(use_case_panels[i]);
             }
+            //this.Controls.Clear();
+            
 
-            //this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+        }
+        private void GBMIVA_Load(object sender, EventArgs e)
+        {
+            load_form();          
         }
 
         private void label2_MouseLeave(object sender, EventArgs e)
@@ -178,6 +184,8 @@ namespace WindowsDashboardApp
             usecases_form.Show();
 
         }
+
+       
 
 
 

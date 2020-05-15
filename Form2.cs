@@ -32,7 +32,6 @@ namespace WindowsDashboardApp
         private void update_db()
         {
             this.Validate();
-
             this.configuration_tblTableAdapter.ClearBeforeFill = true;
 
             this.gbm_ivaTableAdapter.Update(this.dashboardDataSet.gbm_iva);
@@ -51,6 +50,8 @@ namespace WindowsDashboardApp
             this.camera_configuration_tblTableAdapter.Fill(this.dashboardDataSet.camera_configuration_tbl);
             this.configuration_tblTableAdapter.Fill(this.dashboardDataSet.configuration_tbl);
             this.configuration_type_tblTableAdapter.Fill(this.dashboardDataSet.configuration_type_tbl);
+
+
 
         }
         private void Form2_Load(object sender, EventArgs e)
@@ -293,8 +294,6 @@ namespace WindowsDashboardApp
 
         private void controlNavigator4_ButtonClick(object sender, NavigatorButtonClickEventArgs e)
         {
-            //MessageBox.Show(e.Button.ImageIndex.ToString());
-            //MessageBox.Show(e.Button.ButtonType.ToString());
             if (e.Button.ButtonType.ToString() != "Append")
             {
                 update_db();
@@ -354,6 +353,11 @@ namespace WindowsDashboardApp
                     }
                 }
             }
+        }
+
+        private void gridControl3_BackColorChanged(object sender, EventArgs e)
+        {
+            gridControl3.BackColor = Color.LightGreen;
         }
     }
 }
