@@ -8,15 +8,15 @@
   &lt;ConnectionString&gt;server=localhost;user id=root;password=admin;database=dashboard;persistsecurityinfo=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=localhost;user id=root;password=admin;database=dashboard;persistsecurityinfo=True</Value>
+      <Value Profile="(Default)">server=192.168.1.106;user id=admin1;password=india1234;database=dashboard;persistsecurityinfo=True</Value>
     </Setting>
     <Setting Name="dashboardConnectionString1" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=localhost;user id=root;database=dashboard&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;server=192.168.1.106;user id=admin1;database=dashboard&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=localhost;user id=root;database=dashboard</Value>
+      <Value Profile="(Default)">server=192.168.1.106;user id=admin1;database=dashboard</Value>
     </Setting>
   </Settings>
 </SettingsFile>

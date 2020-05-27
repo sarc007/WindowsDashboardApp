@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using MySql.Data.MySqlClient;
 using MySql.Data;
+using System.Diagnostics;
 
 namespace WindowsDashboardApp
 {
@@ -27,7 +28,9 @@ namespace WindowsDashboardApp
             label1.Font = new System.Drawing.Font("Tahoma", 20F);
 
             var id = "";
-            string connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
+            //string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
             MySqlDataReader row2;
@@ -85,7 +88,9 @@ namespace WindowsDashboardApp
             flowLayout_ip.Controls.Clear();
             var id = "";
             string btn = (sender as SimpleButton).Name;
-            string connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
+            //string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
             MySqlDataReader row2;
@@ -146,7 +151,32 @@ namespace WindowsDashboardApp
 
         private void ip_btn_click(object sender, EventArgs e)
         {
-            MessageBox.Show((sender as SimpleButton).Name.ToString());
+            string str = (sender as SimpleButton).Text.ToString();
+            //MessageBox.Show(str);
+            string[] stringSeparators = new string[] { "\r\n" };
+            string[] lines = str.Split(stringSeparators, StringSplitOptions.None);
+            //Console.WriteLine("Nr. Of items in list: " + lines.Length); // 2 lines
+            var ip = lines[0];
+            var user = lines[1];
+            var pwd = lines[2];
+            var port = lines[3];
+            run_cmd(ip, user, pwd, port);
+            //foreach (string s in lines)
+            //{
+            //  //  Console.WriteLine(s); //But will print 3 lines in total.
+            //    MessageBox.Show(s);
+            //}
+        }
+
+        private void run_cmd(string ip, string user, string password, string port)
+        {
+            ProcessStartInfo start = new ProcessStartInfo();
+            start.FileName = "C:\\Python37\\python.exe";
+            start.Arguments = string.Format("B:\\gstream_work\\No_Photo_Zone\\show_camera.py --ip {0} --user {1} --password {2} --port {3}", ip, user, password, port);
+            start.UseShellExecute = false;
+            start.RedirectStandardOutput = true;
+            start.CreateNoWindow = true;
+            Process run_script = Process.Start(start);
         }
 
         private void simpleButton1_Click_1(object sender, EventArgs e)

@@ -35,7 +35,7 @@ namespace WindowsDashboardApp
 
         private void label2_MouseHover(object sender, EventArgs e)
         {
-            labeltext.BackColor = Color.BlueViolet;
+            //labeltext.BackColor = Color.BlueViolet;
         }
     }
 }

@@ -30,9 +30,19 @@ namespace WindowsDashboardApp
             InitializeComponent();
         }
         public void load_form() {
+            //string workingDirectory = Environment.CurrentDirectory;
+            //MessageBox.Show(workingDirectory + "\\images\\logo.jpeg");
+            //Label1.Image = 
+            //Image image1 = Image.FromFile(workingDirectory + "\\images\\logo.jpeg");
+           
 
-            
-            string connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+            // Set the size of the label to accommodate the bitmap size.
+
+            //lblLogo.Size = new Size(175, 56 );
+            //lblLogo.Image = new Bitmap(image1, lblLogo.Size); ;
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
+            //string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
@@ -129,7 +139,8 @@ namespace WindowsDashboardApp
                 this.gbm_usecases_flow_layout.Controls.Add(use_case_panels[i]);
             }
             //this.Controls.Clear();
-            
+
+            //MessageBox.Show("final call");
 
         }
         private void GBMIVA_Load(object sender, EventArgs e)
@@ -185,9 +196,9 @@ namespace WindowsDashboardApp
 
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

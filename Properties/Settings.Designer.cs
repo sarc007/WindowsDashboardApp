@@ -26,8 +26,11 @@ namespace WindowsDashboardApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=admin;database=dashboard;persistsecurityin" +
-            "fo=True")]
+        //DbConnection dbCon = new DbConnection();
+        //string connetionString = dbCon.getConnection();
+
+        [global::System.Configuration.DefaultSettingValueAttribute("server=192.168.1.106;user id=admin1;password=india1234;database=dashboard;persist" +
+            "securityinfo=True")]
         public string dashboardConnectionString {
             get {
                 return ((string)(this["dashboardConnectionString"]));
@@ -37,7 +40,7 @@ namespace WindowsDashboardApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=dashboard")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=192.168.1.106;user id=admin1;database=dashboard")]
         public string dashboardConnectionString1 {
             get {
                 return ((string)(this["dashboardConnectionString1"]));

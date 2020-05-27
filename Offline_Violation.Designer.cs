@@ -180,7 +180,7 @@
             this.flowLayout_video.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayout_video.Location = new System.Drawing.Point(279, 427);
             this.flowLayout_video.Name = "flowLayout_video";
-            this.flowLayout_video.Size = new System.Drawing.Size(37, 311);
+            this.flowLayout_video.Size = new System.Drawing.Size(201, 311);
             this.flowLayout_video.TabIndex = 5;
             // 
             // label11
@@ -190,7 +190,7 @@
             this.label11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(279, 391);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 36);
+            this.label11.Size = new System.Drawing.Size(201, 36);
             this.label11.TabIndex = 4;
             this.label11.Text = "SELECT VIDEO";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,7 +202,7 @@
             this.flow_layout_camera.Dock = System.Windows.Forms.DockStyle.Top;
             this.flow_layout_camera.Location = new System.Drawing.Point(279, 36);
             this.flow_layout_camera.Name = "flow_layout_camera";
-            this.flow_layout_camera.Size = new System.Drawing.Size(37, 355);
+            this.flow_layout_camera.Size = new System.Drawing.Size(201, 355);
             this.flow_layout_camera.TabIndex = 3;
             // 
             // label6
@@ -212,7 +212,7 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(279, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 36);
+            this.label6.Size = new System.Drawing.Size(201, 36);
             this.label6.TabIndex = 2;
             this.label6.Text = "SELECT CAMERA";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,9 +224,9 @@
             this.sidePanel_violation.Controls.Add(this.tablePanel1);
             this.sidePanel_violation.Controls.Add(this.label5);
             this.sidePanel_violation.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sidePanel_violation.Location = new System.Drawing.Point(316, 0);
+            this.sidePanel_violation.Location = new System.Drawing.Point(480, 0);
             this.sidePanel_violation.Name = "sidePanel_violation";
-            this.sidePanel_violation.Size = new System.Drawing.Size(935, 738);
+            this.sidePanel_violation.Size = new System.Drawing.Size(771, 738);
             this.sidePanel_violation.TabIndex = 1;
             this.sidePanel_violation.Text = "sidePanel2";
             // 
@@ -234,9 +234,9 @@
             // 
             this.panel2.Controls.Add(this.axWindowsMediaPlayer2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(465, 391);
+            this.panel2.Location = new System.Drawing.Point(368, 391);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(470, 347);
+            this.panel2.Size = new System.Drawing.Size(403, 347);
             this.panel2.TabIndex = 4;
             // 
             // axWindowsMediaPlayer2
@@ -246,7 +246,7 @@
             this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(0, 0);
             this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
             this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
-            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(470, 347);
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(403, 347);
             this.axWindowsMediaPlayer2.TabIndex = 1;
             // 
             // frame
@@ -254,7 +254,7 @@
             this.frame.Dock = System.Windows.Forms.DockStyle.Left;
             this.frame.Location = new System.Drawing.Point(1, 391);
             this.frame.Name = "frame";
-            this.frame.Size = new System.Drawing.Size(464, 347);
+            this.frame.Size = new System.Drawing.Size(367, 347);
             this.frame.TabIndex = 3;
             // 
             // tablePanel1
@@ -273,7 +273,7 @@
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 42F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(934, 355);
+            this.tablePanel1.Size = new System.Drawing.Size(770, 355);
             this.tablePanel1.TabIndex = 2;
             // 
             // label5
@@ -283,7 +283,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(934, 36);
+            this.label5.Size = new System.Drawing.Size(770, 36);
             this.label5.TabIndex = 1;
             this.label5.Text = "VIOLATION LIST";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

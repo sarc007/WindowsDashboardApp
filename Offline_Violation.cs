@@ -34,8 +34,10 @@ namespace WindowsDashboardApp
             label3.Font = new System.Drawing.Font("Tahoma", 20F);
             label3.Left = (this.Width - label3.Width) / 2;
             var id = "";
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
 
-            string connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+//            string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row, row2;
             MySqlCommand cmd = new MySqlCommand();
@@ -264,13 +266,17 @@ namespace WindowsDashboardApp
             flowLayout_video.Controls.Clear();
             string site = (sender as SimpleButton).Name;
             string site_no = "";
-            string connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
+
+            //string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
             cnn.Open();
             
             string site_number = "SELECT ID FROM configuration_tbl where configuaration_description_fld = '" + site + "';";
+            //MessageBox.Show(site_number);
             cmd = new MySqlCommand(site_number, cnn);
             row = cmd.ExecuteReader();
 
@@ -279,6 +285,12 @@ namespace WindowsDashboardApp
                 site_no = row["ID"].ToString();
             }
             row.Close();
+
+            //string show_site = "SELECT * FROM dashboard.configuration_tbl where configuaration_description_fld = '" + site + "';";
+           // cmd = new MySqlCommand(show_site, cnn);
+            //row_ = cmd.ExecuteReader();
+            //MessageBox.Show(show_site);
+
 
             string filter_camera = "SELECT distinct ID FROM dashboard.camera_view where config_id_fld = " + site_no + " and violation_datetime_fld between '" + fromDate.Value.ToString("yyyy-MM-dd") + "' and '" + toDate.Value.ToString("yyyy-MM-dd") + "'; ";
             cmd = new MySqlCommand(filter_camera, cnn);
@@ -290,8 +302,7 @@ namespace WindowsDashboardApp
                 camera_list.Add(row["id"].ToString());
             }
             row.Close();
-
-            //MessageBox.Show(camera_list.Count.ToString()); 
+ 
 
             List<string> camera_ips = new List<string>();
             List<string> camera_users = new List<string>();
@@ -349,13 +360,16 @@ namespace WindowsDashboardApp
             tablePanel1.Controls.Clear();
             flowLayout_video.Controls.Clear();
             int camera_id = (int)(sender as Label).Tag;
-            string connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
+
+//            string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
             cnn.Open();
             //SELECT * FROM dashboard.video_view where camera_config_id = 5 and datetime_fld between "2018-01-01" and "2020-12-31";
-            string filter_camera = "SELECT * FROM dashboard.video_view where camera_config_id = " + camera_id + " and datetime_fld between '" + fromDate.Value.ToString("yyyy-MM-dd") + "' and '" + toDate.Value.ToString("yyyy-MM-dd") + "'; ";
+            string filter_camera = "SELECT * FROM dashboard.video_view where camera_config_id = " + camera_id + " and violation_datetime_fld between '" + fromDate.Value.ToString("yyyy-MM-dd") + "' and '" + toDate.Value.ToString("yyyy-MM-dd") + "'; ";
             cmd = new MySqlCommand(filter_camera, cnn);
             row = cmd.ExecuteReader();
             List<string> video_list = new List<string>();
@@ -411,7 +425,10 @@ namespace WindowsDashboardApp
             tablePanel1.Controls.Clear();
 
             int video_id = (int)(sender as Label).Tag;
-            string connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
+
+//            string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
@@ -538,13 +555,15 @@ namespace WindowsDashboardApp
             flow_layout_camera.Controls.Clear();
             flowLayout_video.Controls.Clear();
             tablePanel1.Controls.Clear();
-            string connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
+
+            //string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
             cnn.Open();
 
-            //dateTimePicker1.Value.ToString("yyyy-MM-dd");
             string filter_site = "SELECT distinct id FROM dashboard.site_view where config_type_id = "+ UseCases_Form.conf_type_id +" and violation_datetime_fld between '" + fromDate.Value.ToString("yyyy-MM-dd") + "' and '" + toDate.Value.ToString("yyyy-MM-dd") + "'; ";
             cmd = new MySqlCommand(filter_site, cnn);
             row = cmd.ExecuteReader();
@@ -556,6 +575,7 @@ namespace WindowsDashboardApp
             }
             row.Close();
 
+            //MessageBox.Show(filter_site);
             List<string> desc = new List<string>();
 
             for (int i = 0; i < site_list.Count; i++)

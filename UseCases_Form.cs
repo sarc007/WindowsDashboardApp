@@ -23,12 +23,14 @@ namespace WindowsDashboardApp
         private void UseCases_Form_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            string connetionString = null;
+            //string connetionString = null;
             MySqlConnection cnn;
             var gbm_iva_id = 0;
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
-            connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
+            //connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             cnn = new MySqlConnection(connetionString);
             cnn.Open();
 
@@ -41,7 +43,7 @@ namespace WindowsDashboardApp
             }
             row.Close();
 
-            string query = "SELECT * FROM configuration_type_tbl WHERE fk_gbm_iva_id = " + gbm_iva_id + ";";
+            string query = "SELECT * FROM configuration_type_tbl WHERE fk_gbm_iva_id = " + gbm_iva_id + " and active_fld = 1;";
             cmd = new MySqlCommand(query, cnn);
             row = cmd.ExecuteReader();
             var count_of_records = 0;
@@ -69,16 +71,14 @@ namespace WindowsDashboardApp
             {
                 //
                 // SplitContainer
-                //
-                //violation[x].Visible = true;
-                //FlowLayoutPanel.Controls.Add(this.splitContainer1);
                 violation[x] = new SplitContainer();
                 violation[x].Orientation = System.Windows.Forms.Orientation.Horizontal;
+                violation[x].Margin = new System.Windows.Forms.Padding(50);
                 violation[x].Parent = this.flowLayoutPanel1;
-                violation[x].Location = new System.Drawing.Point(0, 0);
+                violation[x].Location = new System.Drawing.Point(10, 35);
                 violation[x].Name = buttons[x].ToString();
                 violation[x].Orientation = System.Windows.Forms.Orientation.Horizontal;
-                violation[x].Size = new System.Drawing.Size(380, 345);
+                violation[x].Size = new System.Drawing.Size(380, 300);
                 violation[x].SplitterDistance = 225;
                 violation[x].TabIndex = buttons_count + 1;
                 violation[x].Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Paint);
@@ -88,12 +88,12 @@ namespace WindowsDashboardApp
                 violation[x].Panel1.BackgroundImage = Image.FromFile(images[x]);
                 violation[x].Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                 violation[x].Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Paint);
-             
+                violation[x].Size = new System.Drawing.Size(380, 450);
                 //
                 // Simplebtn1
                 //
                 simple_btns[buttons_count] = new SimpleButton();
-                simple_btns[buttons_count].Location = new Point(10, 70);
+                simple_btns[buttons_count].Location = new Point(10, 55);
                 simple_btns[buttons_count].Name = buttons[x];
                 simple_btns[buttons_count].Size = new System.Drawing.Size(160, 45);
                 simple_btns[buttons_count].TabIndex = buttons_count;
@@ -106,7 +106,7 @@ namespace WindowsDashboardApp
                 // Simplebtn2
                 //
                 simple_btns[buttons_count + 1] = new SimpleButton();
-                simple_btns[buttons_count + 1].Location = new Point(200, 70);
+                simple_btns[buttons_count + 1].Location = new Point(200, 55);
                 simple_btns[buttons_count + 1].Name = buttons[x];
                 simple_btns[buttons_count + 1].Size = new System.Drawing.Size(160, 45);
                 simple_btns[buttons_count + 1].TabIndex = buttons_count + 1;
@@ -119,7 +119,7 @@ namespace WindowsDashboardApp
                 //
                 var temp = new Label();
                 temp.Font = new System.Drawing.Font("Tahome", 20F);
-                temp.Location = new System.Drawing.Point(25, 20);
+                temp.Location = new System.Drawing.Point(25, 12);
                 temp.Name = "label_" + x.ToString();
                 temp.Size = new Size(340, 35);
                 temp.TabIndex = tab_index_var + 2;
