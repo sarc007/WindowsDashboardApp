@@ -18,10 +18,17 @@ namespace WindowsDashboardApp
         {
             InitializeComponent();
         }
+        public static int coordionWidth = 0;
+        public static int size_width = 0;
+        public static int size_height = 0;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.Refresh();
+            coordionWidth = accordionControl1.Size.Width;
+            size_width = fluentDesignFormControl1.Size.Width;
+            size_height = fluentDesignFormControl1.Size.Height;
+
             this.WindowState = FormWindowState.Maximized;
             if (!container.Controls.Contains(GBMIVA.Instance))
             {
@@ -69,6 +76,14 @@ namespace WindowsDashboardApp
             Application.Exit();
         }
 
-        
+        public static int height = SystemInformation.PrimaryMonitorSize.Height;
+        public static int width = SystemInformation.PrimaryMonitorSize.Width;
+
+        private void fluentDesignFormControl1_Resize(object sender, EventArgs e)
+        {
+            this.Height = height;
+            this.Width = width;
+            //MessageBox.Show(width + ", " + height);
+        }
     }
 }

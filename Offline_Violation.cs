@@ -268,13 +268,12 @@ namespace WindowsDashboardApp
             string site_no = "";
             DbConnection dbCon = new DbConnection();
             string connetionString = dbCon.getConnection();
-
-            //string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
             cnn.Open();
-            
+
+
             string site_number = "SELECT ID FROM configuration_tbl where configuaration_description_fld = '" + site + "';";
             //MessageBox.Show(site_number);
             cmd = new MySqlCommand(site_number, cnn);
@@ -286,10 +285,18 @@ namespace WindowsDashboardApp
             }
             row.Close();
 
-            //string show_site = "SELECT * FROM dashboard.configuration_tbl where configuaration_description_fld = '" + site + "';";
-           // cmd = new MySqlCommand(show_site, cnn);
-            //row_ = cmd.ExecuteReader();
-            //MessageBox.Show(show_site);
+
+            //string show_camera = "SELECT ID FROM dashboard.camera_configuration_tbl where config_id_fld = '" + site_no + "';";
+            //MessageBox.Show(show_camera);
+            //cmd = new MySqlCommand(show_camera, cnn);
+            //row = cmd.ExecuteReader();
+
+            //List<string> camera_list = new List<string>();
+            //while (row.Read())
+            //{
+            //    camera_list.Add(row["id"].ToString());
+            //}
+            //row.Close();
 
 
             string filter_camera = "SELECT distinct ID FROM dashboard.camera_view where config_id_fld = " + site_no + " and violation_datetime_fld between '" + fromDate.Value.ToString("yyyy-MM-dd") + "' and '" + toDate.Value.ToString("yyyy-MM-dd") + "'; ";
@@ -302,7 +309,7 @@ namespace WindowsDashboardApp
                 camera_list.Add(row["id"].ToString());
             }
             row.Close();
- 
+
 
             List<string> camera_ips = new List<string>();
             List<string> camera_users = new List<string>();
@@ -363,7 +370,6 @@ namespace WindowsDashboardApp
             DbConnection dbCon = new DbConnection();
             string connetionString = dbCon.getConnection();
 
-//            string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();

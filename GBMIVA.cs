@@ -34,6 +34,7 @@ namespace WindowsDashboardApp
             //MessageBox.Show(workingDirectory + "\\images\\logo.jpeg");
             //Label1.Image = 
             //Image image1 = Image.FromFile(workingDirectory + "\\images\\logo.jpeg");
+            gbmlogo.Image = Image.FromFile("GBM.jpg");
            
 
             // Set the size of the label to accommodate the bitmap size.
@@ -199,6 +200,12 @@ namespace WindowsDashboardApp
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gbm_usecases_flow_layout_Resize(object sender, EventArgs e)
+        {
+            panel1.Size = new Size(MainForm.size_width, MainForm.size_height);
+            gbmlogo.Location = new Point((MainForm.width / 2) - MainForm.coordionWidth, 0);
         }
     }
 }

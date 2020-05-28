@@ -98,6 +98,7 @@
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1365, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
+            this.fluentDesignFormControl1.Resize += new System.EventHandler(this.fluentDesignFormControl1_Resize);
             // 
             // MainForm
             // 
