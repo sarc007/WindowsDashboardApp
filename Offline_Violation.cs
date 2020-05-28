@@ -28,6 +28,9 @@ namespace WindowsDashboardApp
 
         private void Offline_Violation_Load(object sender, EventArgs e)
         {
+          
+            
+
             toDate.Value = DateTime.Today.AddDays(+1);
             this.WindowState = FormWindowState.Maximized;
             label3.Text = UseCases_Form.UseCases;
@@ -39,7 +42,7 @@ namespace WindowsDashboardApp
 
 //            string connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             MySqlConnection cnn = new MySqlConnection(connetionString);
-            MySqlDataReader row, row2;
+            MySqlDataReader row, row2,row3;
             MySqlCommand cmd = new MySqlCommand();
             cnn.Open();
 
@@ -52,6 +55,8 @@ namespace WindowsDashboardApp
                 id = row["ID"].ToString();
             }
             row.Close();
+
+
 
             string query = "SELECT * FROM configuration_tbl WHERE config_type_id = '" + id + "';";
             cmd = new MySqlCommand(query, cnn);
@@ -67,6 +72,32 @@ namespace WindowsDashboardApp
                 config_tbl_id.Add(id_from_db);
             }
             row2.Close();
+
+            string site_view_click = "SELECT MIN(violation_datetime_fld) FROM dashboard.site_view;";
+            cmd = new MySqlCommand(site_view_click, cnn);
+            row3 = cmd.ExecuteReader();
+
+            while (row3.Read())
+            {
+                
+                string str = row3["MIN(violation_datetime_fld)"].ToString();
+                string[] stringSeparators = new string[] { " " };
+                string[] lines = str.Split(stringSeparators, StringSplitOptions.None);
+                int year, month, date;
+
+                string[] stringSeparators1 = new string[] { "-" };
+                string[] datetime1 = lines[0].Split(stringSeparators1, StringSplitOptions.None);
+
+                date = Convert.ToInt32(datetime1[0]);
+                month = Convert.ToInt32(datetime1[1]);
+                year = Convert.ToInt32(datetime1[2]);
+                MessageBox.Show(year.ToString() + ", " + month.ToString() + ", " + date.ToString());
+                fromDate.Value = new DateTime(year, month, date);
+            }
+            row3.Close();
+
+
+
 
             SimpleButton[] simple_btns = new SimpleButton[desc.Count];
             for (int j = 0; j < desc.Count; j++)

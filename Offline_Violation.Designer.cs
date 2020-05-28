@@ -52,6 +52,7 @@
             this.side_panel_flow_layout = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.process1 = new System.Diagnostics.Process();
             this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -331,6 +332,16 @@
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
+            // process1
+            // 
+            this.process1.StartInfo.Domain = "";
+            this.process1.StartInfo.LoadUserProfile = false;
+            this.process1.StartInfo.Password = null;
+            this.process1.StartInfo.StandardErrorEncoding = null;
+            this.process1.StartInfo.StandardOutputEncoding = null;
+            this.process1.StartInfo.UserName = "";
+            this.process1.SynchronizingObject = this;
+            // 
             // Offline_Violation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +395,6 @@
         private System.Windows.Forms.Panel frame;
         private System.Windows.Forms.Panel panel2;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
+        private System.Diagnostics.Process process1;
     }
 }
