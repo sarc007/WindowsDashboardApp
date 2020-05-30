@@ -45,6 +45,7 @@ namespace WindowsDashboardApp
             MySqlDataReader row, row2,row3;
             MySqlCommand cmd = new MySqlCommand();
             cnn.Open();
+            //MessageBox.Show("DATABASE CONNECTED");
 
             string query_to_get_btn = "SELECT ID FROM configuration_type_tbl WHERE configuration_description_fld = '" + label3.Text + "';";
             cmd = new MySqlCommand(query_to_get_btn, cnn);
@@ -55,6 +56,7 @@ namespace WindowsDashboardApp
                 id = row["ID"].ToString();
             }
             row.Close();
+            //MessageBox.Show(id.ToString());
 
 
 
@@ -72,6 +74,7 @@ namespace WindowsDashboardApp
                 config_tbl_id.Add(id_from_db);
             }
             row2.Close();
+            //MessageBox.Show(desc.Count.ToString() + ", " + config_tbl_id.Count.ToString());
 
             string site_view_click = "SELECT MIN(violation_datetime_fld) FROM dashboard.site_view;";
             cmd = new MySqlCommand(site_view_click, cnn);
@@ -84,15 +87,33 @@ namespace WindowsDashboardApp
                 string[] stringSeparators = new string[] { " " };
                 string[] lines = str.Split(stringSeparators, StringSplitOptions.None);
                 int year, month, date;
+                //MessageBox.Show(lines[0].ToString());
+                string temp = lines[0].ToString();
 
-                string[] stringSeparators1 = new string[] { "-" };
-                string[] datetime1 = lines[0].Split(stringSeparators1, StringSplitOptions.None);
+                if (temp.Contains("-"))
+                {
+                    string[] stringSeparators1 = new string[] { "-" };
+                    string[] datetime1 = lines[0].Split(stringSeparators1, StringSplitOptions.None);
 
-                date = Convert.ToInt32(datetime1[0]);
-                month = Convert.ToInt32(datetime1[1]);
-                year = Convert.ToInt32(datetime1[2]);
-                MessageBox.Show(year.ToString() + ", " + month.ToString() + ", " + date.ToString());
-                fromDate.Value = new DateTime(year, month, date);
+                    date = Convert.ToInt32(datetime1[0]);
+                    month = Convert.ToInt32(datetime1[1]);
+                    year = Convert.ToInt32(datetime1[2]);
+                    //MessageBox.Show(year.ToString() + ", " + month.ToString() + ", " + date.ToString());
+                    fromDate.Value = new DateTime(year, month, date);
+                }
+                else
+                {
+                    string[] stringSeparators1 = new string[] { "/" };
+                    string[] datetime1 = lines[0].Split(stringSeparators1, StringSplitOptions.None);
+
+                    date = Convert.ToInt32(datetime1[0]);
+                    month = Convert.ToInt32(datetime1[1]);
+                    year = Convert.ToInt32(datetime1[2]);
+                    //MessageBox.Show(year.ToString() + ", " + month.ToString() + ", " + date.ToString());
+                    fromDate.Value = new DateTime(year, month, date);
+                }
+
+                //MessageBox.Show(year.ToString() + ", " + month.ToString() + ", " + date.ToString());
             }
             row3.Close();
 
@@ -146,6 +167,7 @@ namespace WindowsDashboardApp
             }
 
             Label[] label_select_camera = new Label[camera_ips.Count];
+            //MessageBox.Show(camera_ips.Count.ToString());
 
             for (int j = 0; j < camera_ips.Count; j++)
             {
@@ -184,7 +206,7 @@ namespace WindowsDashboardApp
             }
 
             Label[] label_select_video = new Label[video_name_list.Count];
-
+            //MessageBox.Show(video_name_list.Count.ToString());
             for (int j = 0; j < video_name_list.Count; j++)
             {
                 label_select_video[j] = new Label();
@@ -202,6 +224,7 @@ namespace WindowsDashboardApp
             List<string> violation_image_path_list = new List<string>();
             List<string> violation_video_path_list = new List<string>();
             List<DateTime> violation_datetime_list = new List<DateTime>();
+            //MessageBox.Show(id_list.Count.ToString());
 
             for (int i = 0; i < id_list.Count; i++)
             {
@@ -219,7 +242,7 @@ namespace WindowsDashboardApp
 
             SimpleButton[] label_violation = new SimpleButton[violation_video_path_list.Count * 3];
             var srno = 1;
-
+            //MessageBox.Show(violation_video_path_list.Count.ToString());
             for (int x = 0; x < violation_video_path_list.Count; x++)
             {
                 for (int y = 0; y < 4; y++)
@@ -287,7 +310,11 @@ namespace WindowsDashboardApp
         private void play_video(object sender, EventArgs e)
         {
             this.axWindowsMediaPlayer2.URL = (sender as SimpleButton).Text.ToString();
-            
+            //this.axWindowsMediaPlayer2.fullScreen = true;
+            axWindowsMediaPlayer2.settings.setMode("loop", true);
+            //axWindowsMediaPlayer2.Ctlcontrols.play();
+
+
         }
 
         private void site_click(object sender, EventArgs e)
@@ -592,6 +619,9 @@ namespace WindowsDashboardApp
             flow_layout_camera.Controls.Clear();
             flowLayout_video.Controls.Clear();
             tablePanel1.Controls.Clear();
+            frame.Controls.Clear();
+            axWindowsMediaPlayer2.Controls.Clear();
+            //axWindowsMediaPlayer2.
             DbConnection dbCon = new DbConnection();
             string connetionString = dbCon.getConnection();
 

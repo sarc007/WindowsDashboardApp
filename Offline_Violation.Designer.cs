@@ -72,7 +72,7 @@
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(0, 31);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1251, 862);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1167, 698);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // splitContainer1
@@ -84,7 +84,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Teal;
             this.splitContainer1.Panel1.Controls.Add(this.show_violation);
             this.splitContainer1.Panel1.Controls.Add(this.simpleButton1);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
@@ -92,6 +92,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.toDate);
             this.splitContainer1.Panel1.Controls.Add(this.fromDate);
+            this.splitContainer1.Panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             // 
             // splitContainer1.Panel2
             // 
@@ -102,8 +103,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.sidePanel_violation);
             this.splitContainer1.Panel2.Controls.Add(this.sidePanel1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1251, 862);
-            this.splitContainer1.SplitterDistance = 120;
+            this.splitContainer1.Size = new System.Drawing.Size(1167, 698);
+            this.splitContainer1.SplitterDistance = 97;
             this.splitContainer1.TabIndex = 0;
             // 
             // show_violation
@@ -144,6 +145,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(257, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
@@ -153,6 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Location = new System.Drawing.Point(617, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
@@ -177,21 +180,22 @@
             // flowLayout_video
             // 
             this.flowLayout_video.AutoScroll = true;
-            this.flowLayout_video.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.flowLayout_video.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.flowLayout_video.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayout_video.Location = new System.Drawing.Point(279, 427);
+            this.flowLayout_video.Location = new System.Drawing.Point(165, 427);
             this.flowLayout_video.Name = "flowLayout_video";
-            this.flowLayout_video.Size = new System.Drawing.Size(201, 311);
+            this.flowLayout_video.Size = new System.Drawing.Size(77, 170);
             this.flowLayout_video.TabIndex = 5;
             // 
             // label11
             // 
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label11.Dock = System.Windows.Forms.DockStyle.Top;
             this.label11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(279, 391);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label11.Location = new System.Drawing.Point(165, 391);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(201, 36);
+            this.label11.Size = new System.Drawing.Size(77, 36);
             this.label11.TabIndex = 4;
             this.label11.Text = "SELECT VIDEO";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -199,21 +203,22 @@
             // flow_layout_camera
             // 
             this.flow_layout_camera.AutoScroll = true;
-            this.flow_layout_camera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.flow_layout_camera.BackColor = System.Drawing.Color.LightSkyBlue;
             this.flow_layout_camera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flow_layout_camera.Location = new System.Drawing.Point(279, 36);
+            this.flow_layout_camera.Location = new System.Drawing.Point(165, 36);
             this.flow_layout_camera.Name = "flow_layout_camera";
-            this.flow_layout_camera.Size = new System.Drawing.Size(201, 355);
+            this.flow_layout_camera.Size = new System.Drawing.Size(77, 355);
             this.flow_layout_camera.TabIndex = 3;
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
             this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(279, 0);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label6.Location = new System.Drawing.Point(165, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(201, 36);
+            this.label6.Size = new System.Drawing.Size(77, 36);
             this.label6.TabIndex = 2;
             this.label6.Text = "SELECT CAMERA";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,9 +230,9 @@
             this.sidePanel_violation.Controls.Add(this.tablePanel1);
             this.sidePanel_violation.Controls.Add(this.label5);
             this.sidePanel_violation.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sidePanel_violation.Location = new System.Drawing.Point(480, 0);
+            this.sidePanel_violation.Location = new System.Drawing.Point(242, 0);
             this.sidePanel_violation.Name = "sidePanel_violation";
-            this.sidePanel_violation.Size = new System.Drawing.Size(771, 738);
+            this.sidePanel_violation.Size = new System.Drawing.Size(925, 597);
             this.sidePanel_violation.TabIndex = 1;
             this.sidePanel_violation.Text = "sidePanel2";
             // 
@@ -235,9 +240,9 @@
             // 
             this.panel2.Controls.Add(this.axWindowsMediaPlayer2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(368, 391);
+            this.panel2.Location = new System.Drawing.Point(440, 391);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(403, 347);
+            this.panel2.Size = new System.Drawing.Size(485, 206);
             this.panel2.TabIndex = 4;
             // 
             // axWindowsMediaPlayer2
@@ -247,21 +252,22 @@
             this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(0, 0);
             this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
             this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
-            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(403, 347);
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(485, 206);
             this.axWindowsMediaPlayer2.TabIndex = 1;
             // 
             // frame
             // 
+            this.frame.BackColor = System.Drawing.Color.LightSkyBlue;
             this.frame.Dock = System.Windows.Forms.DockStyle.Left;
             this.frame.Location = new System.Drawing.Point(1, 391);
             this.frame.Name = "frame";
-            this.frame.Size = new System.Drawing.Size(367, 347);
+            this.frame.Size = new System.Drawing.Size(439, 206);
             this.frame.TabIndex = 3;
             // 
             // tablePanel1
             // 
             this.tablePanel1.AllowTouchScroll = true;
-            this.tablePanel1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tablePanel1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tablePanel1.Appearance.Options.UseBackColor = true;
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 12.04F),
@@ -274,17 +280,18 @@
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 42F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(770, 355);
+            this.tablePanel1.Size = new System.Drawing.Size(924, 355);
             this.tablePanel1.TabIndex = 2;
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label5.Location = new System.Drawing.Point(1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(770, 36);
+            this.label5.Size = new System.Drawing.Size(924, 36);
             this.label5.TabIndex = 1;
             this.label5.Text = "VIOLATION LIST";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,29 +303,30 @@
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel1.Location = new System.Drawing.Point(0, 0);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(279, 738);
+            this.sidePanel1.Size = new System.Drawing.Size(165, 597);
             this.sidePanel1.TabIndex = 0;
             this.sidePanel1.Text = "sidePanel1";
             // 
             // side_panel_flow_layout
             // 
             this.side_panel_flow_layout.AutoScroll = true;
-            this.side_panel_flow_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.side_panel_flow_layout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.side_panel_flow_layout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.side_panel_flow_layout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.side_panel_flow_layout.Location = new System.Drawing.Point(0, 36);
             this.side_panel_flow_layout.Name = "side_panel_flow_layout";
-            this.side_panel_flow_layout.Size = new System.Drawing.Size(278, 702);
+            this.side_panel_flow_layout.Size = new System.Drawing.Size(164, 561);
             this.side_panel_flow_layout.TabIndex = 1;
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(278, 36);
+            this.label4.Size = new System.Drawing.Size(164, 36);
             this.label4.TabIndex = 0;
             this.label4.Text = "SELECT SITE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,7 +336,7 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1251, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1167, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -346,7 +354,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 893);
+            this.ClientSize = new System.Drawing.Size(1167, 729);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.fluentDesignFormControl1);

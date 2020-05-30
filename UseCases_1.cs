@@ -172,7 +172,7 @@ namespace WindowsDashboardApp
         {
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = "C:\\Python37\\python.exe";
-            start.Arguments = string.Format("B:\\gstream_work\\No_Photo_Zone\\show_camera.py --ip {0} --user {1} --password {2} --port {3}", ip, user, password, port);
+            start.Arguments = string.Format("show_camera.py --ip {0} --user {1} --password {2} --port {3}", ip, user, password, port);
             start.UseShellExecute = false;
             start.RedirectStandardOutput = true;
             start.CreateNoWindow = true;

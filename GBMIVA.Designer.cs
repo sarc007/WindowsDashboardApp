@@ -43,7 +43,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(392, 103);
+            this.panel1.Size = new System.Drawing.Size(965, 103);
             this.panel1.TabIndex = 0;
             // 
             // gbmlogo
@@ -63,7 +63,7 @@
             this.gbm_usecases_flow_layout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbm_usecases_flow_layout.Location = new System.Drawing.Point(0, 103);
             this.gbm_usecases_flow_layout.Name = "gbm_usecases_flow_layout";
-            this.gbm_usecases_flow_layout.Size = new System.Drawing.Size(392, 455);
+            this.gbm_usecases_flow_layout.Size = new System.Drawing.Size(965, 455);
             this.gbm_usecases_flow_layout.TabIndex = 1;
             this.gbm_usecases_flow_layout.Resize += new System.EventHandler(this.gbm_usecases_flow_layout_Resize);
             // 
@@ -77,7 +77,7 @@
             this.Controls.Add(this.gbm_usecases_flow_layout);
             this.Controls.Add(this.panel1);
             this.Name = "GBMIVA";
-            this.Size = new System.Drawing.Size(392, 558);
+            this.Size = new System.Drawing.Size(965, 558);
             this.Load += new System.EventHandler(this.GBMIVA_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbmlogo)).EndInit();
