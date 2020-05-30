@@ -26,11 +26,21 @@ namespace Video_Violation.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=root;persistsecurityinfo=True;database=vid" +
-            "eo_violation")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=admin;persistsecurityinfo=True;database=vi" +
+            "deo_violation")]
         public string video_violationConnectionString {
             get {
                 return ((string)(this["video_violationConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=admin;database=video_violation")]
+        public string video_violationConnectionString1 {
+            get {
+                return ((string)(this["video_violationConnectionString1"]));
             }
         }
     }

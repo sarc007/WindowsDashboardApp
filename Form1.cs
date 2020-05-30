@@ -25,7 +25,10 @@ namespace WindowsDashboardApp
             MySqlConnection cnn;
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
-            connetionString = "server=localhost;database=dashboard;uid=app_user_ks;pwd=App_user_dxb_ks2020;";
+            DbConnection dbCon = new DbConnection();
+            connetionString = dbCon.getConnection();
+
+//            connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             cnn = new MySqlConnection(connetionString);
             try
             {
@@ -41,7 +44,7 @@ namespace WindowsDashboardApp
                     if (row.HasRows)
                     {
                         this.Hide();
-                        Main form = new Main();
+                        MainForm form = new MainForm();
                         form.Show();
                     }
                     else
@@ -58,6 +61,11 @@ namespace WindowsDashboardApp
             {
                 MessageBox.Show("Connection Error", "Information");
             }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

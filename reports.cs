@@ -16,11 +16,13 @@ namespace WindowsDashboardApp
         public reports()
         {
             InitializeComponent();
-            string connetionString = null;
+            //string connetionString = null;
             MySqlConnection cnn;
             MySqlDataReader row;
             MySqlCommand cmd = new MySqlCommand();
-            connetionString = "server=localhost;database=dashboard;uid=root;pwd=admin;";
+            DbConnection dbCon = new DbConnection();
+            string connetionString = dbCon.getConnection();
+           // connetionString = "server=192.168.1.106;database=dashboard;uid=admin1;pwd=india1234;";
             cnn = new MySqlConnection(connetionString);
             string outputMessage = "";
             try
