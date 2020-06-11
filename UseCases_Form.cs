@@ -34,16 +34,19 @@ namespace WindowsDashboardApp
             cnn = new MySqlConnection(connetionString);
             cnn.Open();
 
-            string get_gbm_iva_id = "SELECT ID FROM gbm_iva where Name = '" + GBMIVA.UseCases_Form + "';";
+            string get_gbm_iva_id = "SELECT ID FROM gbm_iva where Name = '" + GBMIVA.Home_New + "';";
+            //MessageBox.Show(get_gbm_iva_id);
             cmd = new MySqlCommand(get_gbm_iva_id, cnn);
             row = cmd.ExecuteReader();
             while (row.Read())
             {
                 gbm_iva_id = Convert.ToInt32(row["ID"].ToString());
+                //MessageBox.Show(gbm_iva_id.ToString());
             }
             row.Close();
 
             string query = "SELECT * FROM configuration_type_tbl WHERE fk_gbm_iva_id = " + gbm_iva_id + " and active_fld = 1;";
+            //MessageBox.Show(query);
             cmd = new MySqlCommand(query, cnn);
             row = cmd.ExecuteReader();
             var count_of_records = 0;
@@ -56,13 +59,15 @@ namespace WindowsDashboardApp
                 string col1Value = row["configuration_description_fld"].ToString();
                 string col2Value = row["image_path"].ToString();
                 buttons.Add(col1Value);
+                //MessageBox.Show(col1Value);
                 images.Add(col2Value);
+                //MessageBox.Show(col2Value);
                 config_type_id.Add(Convert.ToInt32(row["ID"]));
                 count_of_records += 1;
             }
 
             SplitContainer[] violation = new SplitContainer[count_of_records];
-            SimpleButton[] simple_btns = new SimpleButton[count_of_records * 2];
+            //SimpleButton[] simple_btns = new SimpleButton[count_of_records * 2];
             List<Label> labels = new List<Label>();
             int buttons_count = 0;
             var tab_index_var = 0;
@@ -78,7 +83,7 @@ namespace WindowsDashboardApp
                 violation[x].Location = new System.Drawing.Point(10, 35);
                 violation[x].Name = buttons[x].ToString();
                 violation[x].Orientation = System.Windows.Forms.Orientation.Horizontal;
-                violation[x].Size = new System.Drawing.Size(380, 300);
+                violation[x].Size = new System.Drawing.Size(380, 100);
                 violation[x].SplitterDistance = 225;
                 violation[x].TabIndex = buttons_count + 1;
                 violation[x].Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Paint);
@@ -88,64 +93,110 @@ namespace WindowsDashboardApp
                 violation[x].Panel1.BackgroundImage = Image.FromFile(images[x]);
                 violation[x].Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                 violation[x].Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Paint);
-                violation[x].Size = new System.Drawing.Size(380, 450);
+                violation[x].Size = new System.Drawing.Size(380, 250);
+                //violation[x].Panel1.BackgroundImage.Click += new System.EventHandler(this.image_button);
                 //
                 // Simplebtn1
                 //
-                simple_btns[buttons_count] = new SimpleButton();
-                simple_btns[buttons_count].Location = new Point(10, 55);
-                simple_btns[buttons_count].Name = buttons[x];
-                simple_btns[buttons_count].Size = new System.Drawing.Size(160, 45);
-                simple_btns[buttons_count].TabIndex = buttons_count;
-                simple_btns[buttons_count].Text = "OFFLINE";
-                simple_btns[buttons_count].Tag = config_type_id[x]; // add id value
-                simple_btns[buttons_count].Click += new System.EventHandler(this.simpleButton_Click);
-                simple_btns[buttons_count].Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-                simple_btns[buttons_count].Appearance.Options.UseForeColor = true;
-                //
+                //simple_btns[buttons_count] = new SimpleButton();
+                //simple_btns[buttons_count].Location = new Point(10, 55);
+                //simple_btns[buttons_count].Name = buttons[x];
+                //simple_btns[buttons_count].Size = new System.Drawing.Size(160, 45);
+                //simple_btns[buttons_count].TabIndex = buttons_count;
+                //simple_btns[buttons_count].Text = "OFFLINE";
+                //simple_btns[buttons_count].Tag = config_type_id[x]; // add id value
+                //simple_btns[buttons_count].Click += new System.EventHandler(this.simpleButton_Click);
+                //simple_btns[buttons_count].Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+                //simple_btns[buttons_count].Appearance.Options.UseForeColor = true;
+                ////
                 // Simplebtn2
                 //
-                simple_btns[buttons_count + 1] = new SimpleButton();
-                simple_btns[buttons_count + 1].Location = new Point(200, 55);
-                simple_btns[buttons_count + 1].Name = buttons[x];
-                simple_btns[buttons_count + 1].Size = new System.Drawing.Size(160, 45);
-                simple_btns[buttons_count + 1].TabIndex = buttons_count + 1;
-                simple_btns[buttons_count + 1].Text = "LIVE CAMERA";
-                simple_btns[buttons_count + 1].Click += new System.EventHandler(this.simpleButton2_Click);
-                simple_btns[buttons_count + 1].Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-                simple_btns[buttons_count + 1].Appearance.Options.UseForeColor = true;
-                //
+                //simple_btns[buttons_count + 1] = new SimpleButton();x
+                //simple_btns[buttons_count + 1].Location = new Point(200, 55);
+                //simple_btns[buttons_count + 1].Name = buttons[x];
+                //simple_btns[buttons_count + 1].Size = new System.Drawing.Size(160, 45);
+                //simple_btns[buttons_count + 1].TabIndex = buttons_count + 1;
+                //simple_btns[buttons_count + 1].Text = "LIVE CAMERA";
+                //simple_btns[buttons_count + 1].Click += new System.EventHandler(this.simpleButton2_Click);
+                //simple_btns[buttons_count + 1].Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+                //simple_btns[buttons_count + 1].Appearance.Options.UseForeColor = true;
+                ////
                 // Label
                 //
                 var temp = new Label();
                 temp.Font = new System.Drawing.Font("Tahome", 20F);
                 temp.Location = new System.Drawing.Point(25, 12);
                 temp.Name = "label_" + x.ToString();
-                temp.Size = new Size(340, 35);
+                temp.Size = new Size(340, 33);
                 temp.TabIndex = tab_index_var + 2;
                 temp.Text = buttons[x].ToString();
                 temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 temp.ForeColor = System.Drawing.Color.BlueViolet;
+                temp.Click += new System.EventHandler(this.label_click);
+                temp.MouseHover += new System.EventHandler(this.label2_MouseHover);
+                temp.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
                 temp.Show();
                 labels.Add(temp);
                 //
                 // Panel2
                 //
-                violation[x].Panel2.Controls.Add(simple_btns[buttons_count]);
+                //violation[x].Panel2.Controls.Add(simple_btns[buttons_count]);
                 violation[x].Panel2.Controls.Add(temp);
-                violation[x].Panel2.Controls.Add(simple_btns[buttons_count + 1]);
+                //violation[x].Panel2.Controls.Add(simple_btns[buttons_count + 1]);
                 violation[x].Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Paint);
                 buttons_count += 2;
                 tab_index_var += 2;
             }
         }
 
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+            (sender as Label).BackColor = Color.Black;
+            (sender as Label).ForeColor = Color.Aqua;
+        }
+
+        private void label2_MouseHover(object sender, EventArgs e)
+        {
+            (sender as Label).BackColor = Color.LightYellow;
+            (sender as Label).ForeColor = Color.Black;
+        }
+
+        private void label_click(object sender, EventArgs e)
+        {
+            //DbConnection dbCon = new DbConnection();
+            //string connetionString = dbCon.getConnection();
+            //MySqlConnection cnn = new MySqlConnection(connetionString);
+            //MySqlDataReader row;
+            //MySqlCommand cmd = new MySqlCommand();
+            //cnn.Open();
+            ////string query = "SELECT * FROM configuration_type_tbl WHERE fk_gbm_iva_id = " + gbm_iva_id + " and active_fld = 1;";
+            //string query = "SELECT * FROM dashboard.configuration_tbl where config_type_id = '" +  + "';";
+            //MessageBox.Show(query);
+            //cmd = new MySqlCommand(query, cnn);
+            //row = cmd.ExecuteReader();
+            //while (row.Read())
+            //{
+            //    string col1Value = row["configuration_description_fld"].ToString();
+            //    MessageBox.Show(col1Value);
+            //}
+
+            //new_demo new_Demo = new new_demo();
+            //new_Demo.Show();
+
+        }
+
+        private void image_button(object sender, EventArgs e)
+        {
+            //new_demo new_Demo = new new_demo();
+            //new_Demo.Show();
+        }
+
         private void simpleButton_Click(object sender, EventArgs e)
         {
-            UseCases = (sender as SimpleButton).Name;
-            conf_type_id = (int)(sender as SimpleButton).Tag;
-            Offline_Violation offline_form = new Offline_Violation();
-            offline_form.Show();
+            //UseCases = (sender as SimpleButton).Name;
+            //conf_type_id = (int)(sender as SimpleButton).Tag;
+            //Offline_Violation offline_form = new Offline_Violation();
+            //offline_form.Show();
 
         }
 
@@ -153,27 +204,23 @@ namespace WindowsDashboardApp
         public static int conf_type_id = -1;
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            ///MessageBox.Show("Simple Button 2");
-            //this.Hide();
-            //online_offline form = new online_offline();
-            //form.Show();
-            //var Label = new Label();
-            UseCases = (sender as SimpleButton).Name;
-            //MessageBox.Show(UseCases);
-            UseCases_1 form2 = new UseCases_1();
-            form2.Show();
+            /////MessageBox.Show("Simple Button 2");
+            ////this.Hide();
+            ////online_offline form = new online_offline();
+            ////form.Show();
+            ////var Label = new Label();
+            //UseCases = (sender as SimpleButton).Name;
+            ////MessageBox.Show(UseCases);
+            //UseCases_1 form2 = new UseCases_1();
+            //form2.Show();
 
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
         private void splitContainer1_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkBlue, ButtonBorderStyle.Inset);
+            
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

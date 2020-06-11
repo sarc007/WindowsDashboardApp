@@ -18,8 +18,8 @@ namespace WindowsDashboardApp
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form2());
            //Application.Run(new GBMIVA());
-            //Application.Run(new only_for_demo());
-           Application.Run(new MainForm());
+           // Application.Run(new Dummy_Form());
+          Application.Run(new MainForm());
             
         }
     }

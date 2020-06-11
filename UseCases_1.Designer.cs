@@ -51,6 +51,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Teal;
             this.splitContainer1.Panel1.Controls.Add(this.simpleButton1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
@@ -85,6 +86,7 @@
             // 
             // flowLayout_ip
             // 
+            this.flowLayout_ip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.flowLayout_ip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayout_ip.Location = new System.Drawing.Point(568, 0);
             this.flowLayout_ip.Name = "flowLayout_ip";
@@ -104,6 +106,7 @@
             // 
             // flowLayout_sidePanel
             // 
+            this.flowLayout_sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.flowLayout_sidePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayout_sidePanel.Location = new System.Drawing.Point(0, 0);
             this.flowLayout_sidePanel.Name = "flowLayout_sidePanel";

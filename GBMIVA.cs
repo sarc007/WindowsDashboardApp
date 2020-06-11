@@ -31,7 +31,7 @@ namespace WindowsDashboardApp
         }
         public void load_form() {
             //string workingDirectory = Environment.CurrentDirectory;
-            //MessageBox.Show(workingDirectory + "\\images\\logo.jpeg");
+            //MessageBox.Show("\\images\\logo.jpeg");
             //Label1.Image = 
             //Image image1 = Image.FromFile(workingDirectory + "\\images\\logo.jpeg");
             gbmlogo.Image = Image.FromFile("GBM.jpg");
@@ -181,19 +181,24 @@ namespace WindowsDashboardApp
         private void gbm_label_click(object sender, EventArgs e)
         {
             //MessageBox.Show((sender as Label).Name.ToString());
-            UseCases_Form = (sender as Label).Name;
-            UseCases_Form ucf = new UseCases_Form();
-            ucf.Show();
+            Home_New = (sender as Label).Name;
+            Home_New home = new Home_New();
+            home.WindowState = FormWindowState.Maximized;
+            home.Show();
+
         }
 
-        public static string UseCases_Form = "";
+        //public static string UseCases_Form = "";
+        public static string Home_New = "";
 
         private void gbm_picture_click(object sender, EventArgs e)
         {
             //MessageBox.Show((sender as PictureBox).Name.ToString()
-            UseCases_Form = (sender as PictureBox).Name;
-            UseCases_Form usecases_form = new UseCases_Form();
-            usecases_form.Show();
+            Home_New = (sender as PictureBox).Name;
+            Home_New home = new Home_New();
+            home.WindowState = FormWindowState.Maximized;
+            home.Show();
+            //MessageBox.Show(Home_New);
 
         }
 
@@ -204,7 +209,7 @@ namespace WindowsDashboardApp
 
         private void gbm_usecases_flow_layout_Resize(object sender, EventArgs e)
         {
-            panel1.Size = new Size(MainForm.size_width, MainForm.size_height);
+            //panel1.Size = new Size(MainForm.size_width, MainForm.size_height);
             gbmlogo.Location = new Point((MainForm.width / 2) - MainForm.coordionWidth, 0);
         }
     }

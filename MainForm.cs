@@ -39,11 +39,12 @@ namespace WindowsDashboardApp
         }
 
         private void aceHome_Click(object sender, EventArgs e)
-        {  
+        {
             container.Controls.Clear();
             GBMIVA gbm = new GBMIVA();
             gbm.Dock = DockStyle.Fill;
             container.Controls.Add(gbm);
+
         }
 
         private void aceConfig_Click(object sender, EventArgs e)
@@ -84,6 +85,11 @@ namespace WindowsDashboardApp
             this.Height = height;
             this.Width = width;
             //MessageBox.Show(width + ", " + height);
+        }
+
+        private void container_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

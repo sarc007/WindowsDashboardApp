@@ -272,7 +272,6 @@ namespace WindowsDashboardApp
                         label_violation[x].Click += new EventHandler(this.show_frame);
                         this.tablePanel1.SetColumn(label_violation[x], colValue + y);
                         this.tablePanel1.SetRow(label_violation[x], rowValue + x);
-
                     }
 
                     else if (y == 2)
@@ -672,6 +671,11 @@ namespace WindowsDashboardApp
             }
 
             cnn.Close();
+        }
+
+        private void tablePanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

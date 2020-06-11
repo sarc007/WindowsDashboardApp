@@ -46,6 +46,7 @@
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(1105, 814);
             this.container.TabIndex = 0;
+            this.container.Click += new System.EventHandler(this.container_Click);
             // 
             // accordionControl1
             // 
