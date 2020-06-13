@@ -161,7 +161,7 @@ namespace WindowsDashboardApp
             }
             view.ActiveFilter.Add(view.Columns["config_id_fld"],
               new ColumnFilterInfo("[config_id_fld] in (" + str_config_id + ")", ""));
-            MessageBox.Show("Hi");
+            
         }
     }
 }
