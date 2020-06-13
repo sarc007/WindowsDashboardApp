@@ -27,6 +27,8 @@ namespace WindowsDashboardApp
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dashboardDataSet.videos' table. You can move, or remove it, as needed.
+            this.videosTableAdapter.Fill(this.dashboardDataSet.videos);
             // TODO: This line of code loads data into the 'dashboardDataSet.camera_configuration_tbl' table. You can move, or remove it, as needed.
             this.camera_configuration_tblTableAdapter.Fill(this.dashboardDataSet.camera_configuration_tbl);
             // TODO: This line of code loads data into the 'dashboardDataSet.configuration_tbl' table. You can move, or remove it, as needed.
@@ -159,6 +161,7 @@ namespace WindowsDashboardApp
             }
             view.ActiveFilter.Add(view.Columns["config_id_fld"],
               new ColumnFilterInfo("[config_id_fld] in (" + str_config_id + ")", ""));
+            MessageBox.Show("Hi");
         }
     }
 }
