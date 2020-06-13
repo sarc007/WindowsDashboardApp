@@ -27,6 +27,9 @@ namespace WindowsDashboardApp
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dashboardDataSet.violation_tbl' table. You can move, or remove it, as needed.
+            this.violation_tblTableAdapter.Fill(this.dashboardDataSet.violation_tbl);
+            ArrayList rows = new ArrayList();
             // TODO: This line of code loads data into the 'dashboardDataSet.videos' table. You can move, or remove it, as needed.
             this.videosTableAdapter.Fill(this.dashboardDataSet.videos);
             // TODO: This line of code loads data into the 'dashboardDataSet.camera_configuration_tbl' table. You can move, or remove it, as needed.
@@ -38,6 +41,8 @@ namespace WindowsDashboardApp
             // TODO: This line of code loads data into the 'dashboardDataSet.configuration_type_tbl' table. You can move, or remove it, as needed.
             this.configuration_type_tblTableAdapter.Fill(this.dashboardDataSet.configuration_type_tbl);
 
+
+           
         }
 
         private void btnApplyFilter_Click(object sender, EventArgs e)
@@ -130,9 +135,26 @@ namespace WindowsDashboardApp
             }
 
         }
+        private void getlistofVideoID()
+        {
+            ArrayList rows = new ArrayList();
+            vidlist.Clear();
+            // Add the selected rows to the list.
+            Int32[] selectedRowHandles = gridView4.GetSelectedRows();
+            for (int i = 0; i < selectedRowHandles.Length; i++)
+            {
+                int selectedRowHandle = selectedRowHandles[i];
+                if (selectedRowHandle >= 0)
+                    rows.Add(gridView4.GetDataRow(selectedRowHandle));
+                DataRow row = rows[i] as DataRow;
+                vidlist.Add((int)row[0]);
 
+            }
+
+        }
         private void gridView2_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
         {
+
             string str_config_id = "";
             getlistofSiteID();
             for (int i = 0; i < sitelist.Count; i++)
@@ -161,7 +183,100 @@ namespace WindowsDashboardApp
             }
             view.ActiveFilter.Add(view.Columns["config_id_fld"],
               new ColumnFilterInfo("[config_id_fld] in (" + str_config_id + ")", ""));
-            
+
         }
+        private void gridView3_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+
+            string str_camera_config_id = "";
+            getlistofCameraID();
+            for (int i = 0; i < camlist.Count; i++)
+            {
+                if (i == 0)
+                {
+                    str_camera_config_id = camlist[i].ToString();
+                }
+                else
+                {
+                    str_camera_config_id = str_camera_config_id + ", " + camlist[i].ToString();
+                }
+
+            }
+
+            ColumnView view = gridView4;
+            /*            if (gridView2.ActiveFilterString.Length > 0)
+                        {
+                            gridView2.ActiveFilterString = "";
+                        }
+            */
+            //            gridView2.ActiveFilterString = "[config_type_id] in (" + str_config_type_id + ")";
+            if (view.ActiveFilterString.Length > 0)
+            {
+                view.ActiveFilter.Remove(view.Columns["camera_config_id"]);
+            }
+            view.ActiveFilter.Add(view.Columns["camera_config_id"],
+              new ColumnFilterInfo("[camera_config_id] in (" + str_camera_config_id + ")", ""));
+
+        }
+
+        private void gridView4_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+            string str_fk_video_id = "";
+            getlistofVideoID();
+            for (int i = 0; i < vidlist.Count; i++)
+            {
+                if (i == 0)
+                {
+                    str_fk_video_id = vidlist[i].ToString();
+                }
+                else
+                {
+                    str_fk_video_id = str_fk_video_id + ", " + vidlist[i].ToString();
+                }
+
+            }
+
+            ColumnView view = gridView5;
+            /*            if (gridView2.ActiveFilterString.Length > 0)
+                        {
+                            gridView2.ActiveFilterString = "";
+                        }
+            */
+            //            gridView2.ActiveFilterString = "[config_type_id] in (" + str_config_type_id + ")";
+            if (view.ActiveFilterString.Length > 0)
+            {
+                view.ActiveFilter.Remove(view.Columns["fk_video_id"]);
+            }
+            view.ActiveFilter.Add(view.Columns["fk_video_id"],
+              new ColumnFilterInfo("[fk_video_id] in (" + str_fk_video_id + ")", ""));
+        }
+        private void gridControl1_Load(object sender, EventArgs e)
+        {
+         
+            gridView1.SelectAll();
+          
+        }
+
+        private void gridControl2_Load(object sender, EventArgs e)
+        {
+            gridView2.SelectAll();
+        }
+
+        private void gridControl3_Load(object sender, EventArgs e)
+        {
+            gridView3.SelectAll();
+        }
+
+        private void gridControl4_Load(object sender, EventArgs e)
+        {
+            gridView4.SelectAll();
+        }
+
+        private void gridControl5_Load(object sender, EventArgs e)
+        {
+            gridView5.SelectAll();
+        }
+
+       
     }
 }

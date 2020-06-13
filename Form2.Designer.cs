@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.configurationtypetblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dashboardDataSet = new WindowsDashboardApp.dashboardDataSet();
@@ -46,15 +57,22 @@
             this.colcamera_ip_fid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.camera_configuration_tblTableAdapter = new WindowsDashboardApp.dashboardDataSetTableAdapters.camera_configuration_tblTableAdapter();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.videosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.videosTableAdapter = new WindowsDashboardApp.dashboardDataSetTableAdapters.videosTableAdapter();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colvideo_name_fld = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colvideo_datetime_fld = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.videosTableAdapter = new WindowsDashboardApp.dashboardDataSetTableAdapters.videosTableAdapter();
             this.gridControl5 = new DevExpress.XtraGrid.GridControl();
+            this.violationtblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colviolation_datetime_fld = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colviolation_frame_path_fld = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colviolation_video_path_fld = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.violation_tblTableAdapter = new WindowsDashboardApp.dashboardDataSetTableAdapters.violation_tblTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationtypetblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardDataSet)).BeginInit();
@@ -66,10 +84,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.cameraconfigurationtblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.violationtblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -82,6 +103,7 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Load += new System.EventHandler(this.gridControl1_Load);
             // 
             // configurationtypetblBindingSource
             // 
@@ -133,6 +155,7 @@
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.gridControl2.Load += new System.EventHandler(this.gridControl2_Load);
             // 
             // configurationtblBindingSource
             // 
@@ -178,6 +201,7 @@
             this.gridControl3.TabIndex = 2;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
+            this.gridControl3.Load += new System.EventHandler(this.gridControl3_Load);
             // 
             // cameraconfigurationtblBindingSource
             // 
@@ -199,9 +223,11 @@
             this.gridView3.OptionsView.ShowAutoFilterRow = true;
             this.gridView3.OptionsView.ShowDetailButtons = false;
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridView3_SelectionChanged);
             // 
             // colcamera_ip_fid
             // 
+            this.colcamera_ip_fid.Caption = "Camera List";
             this.colcamera_ip_fid.FieldName = "camera_ip_fid";
             this.colcamera_ip_fid.Name = "colcamera_ip_fid";
             this.colcamera_ip_fid.Visible = true;
@@ -214,13 +240,19 @@
             // gridControl4
             // 
             this.gridControl4.DataSource = this.videosBindingSource;
-            this.gridControl4.Location = new System.Drawing.Point(884, 12);
+            this.gridControl4.Location = new System.Drawing.Point(871, 12);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(273, 200);
+            this.gridControl4.Size = new System.Drawing.Size(286, 200);
             this.gridControl4.TabIndex = 3;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
+            this.gridControl4.Load += new System.EventHandler(this.gridControl4_Load);
+            // 
+            // videosBindingSource
+            // 
+            this.videosBindingSource.DataMember = "videos";
+            this.videosBindingSource.DataSource = this.dashboardDataSet;
             // 
             // gridView4
             // 
@@ -238,18 +270,11 @@
             this.gridView4.OptionsView.ShowAutoFilterRow = true;
             this.gridView4.OptionsView.ShowDetailButtons = false;
             this.gridView4.OptionsView.ShowGroupPanel = false;
-            // 
-            // videosBindingSource
-            // 
-            this.videosBindingSource.DataMember = "videos";
-            this.videosBindingSource.DataSource = this.dashboardDataSet;
-            // 
-            // videosTableAdapter
-            // 
-            this.videosTableAdapter.ClearBeforeFill = true;
+            this.gridView4.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridView4_SelectionChanged);
             // 
             // colvideo_name_fld
             // 
+            this.colvideo_name_fld.Caption = "Videos feed list";
             this.colvideo_name_fld.FieldName = "video_name_fld";
             this.colvideo_name_fld.Name = "colvideo_name_fld";
             this.colvideo_name_fld.Visible = true;
@@ -259,29 +284,43 @@
             // 
             this.colvideo_datetime_fld.FieldName = "video_datetime_fld";
             this.colvideo_datetime_fld.Name = "colvideo_datetime_fld";
+            this.colvideo_datetime_fld.OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.DateSmart;
             this.colvideo_datetime_fld.Visible = true;
             this.colvideo_datetime_fld.VisibleIndex = 1;
             // 
+            // videosTableAdapter
+            // 
+            this.videosTableAdapter.ClearBeforeFill = true;
+            // 
             // gridControl5
             // 
-            this.gridControl5.DataSource = this.videosBindingSource;
-            this.gridControl5.Location = new System.Drawing.Point(2, 218);
+            this.gridControl5.DataSource = this.violationtblBindingSource;
+            this.gridControl5.Location = new System.Drawing.Point(2, 267);
             this.gridControl5.MainView = this.gridView5;
             this.gridControl5.Name = "gridControl5";
-            this.gridControl5.Size = new System.Drawing.Size(584, 394);
+            this.gridControl5.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemButtonEdit1,
+            this.repositoryItemButtonEdit2});
+            this.gridControl5.Size = new System.Drawing.Size(527, 326);
             this.gridControl5.TabIndex = 4;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
+            this.gridControl5.Load += new System.EventHandler(this.gridControl5_Load);
+            // 
+            // violationtblBindingSource
+            // 
+            this.violationtblBindingSource.DataMember = "violation_tbl";
+            this.violationtblBindingSource.DataSource = this.dashboardDataSet;
             // 
             // gridView5
             // 
             this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2});
+            this.colviolation_datetime_fld,
+            this.colviolation_frame_path_fld,
+            this.colviolation_video_path_fld});
             this.gridView5.GridControl = this.gridControl5;
             this.gridView5.Name = "gridView5";
             this.gridView5.OptionsBehavior.AutoSelectAllInEditor = false;
-            this.gridView5.OptionsBehavior.Editable = false;
             this.gridView5.OptionsFilter.ShowAllTableValuesInFilterPopup = true;
             this.gridView5.OptionsFilter.UseNewCustomFilterDialog = true;
             this.gridView5.OptionsSelection.MultiSelect = true;
@@ -290,25 +329,71 @@
             this.gridView5.OptionsView.ShowDetailButtons = false;
             this.gridView5.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // colviolation_datetime_fld
             // 
-            this.gridColumn1.FieldName = "video_name_fld";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
+            this.colviolation_datetime_fld.FieldName = "violation_datetime_fld";
+            this.colviolation_datetime_fld.Name = "colviolation_datetime_fld";
+            this.colviolation_datetime_fld.Visible = true;
+            this.colviolation_datetime_fld.VisibleIndex = 1;
             // 
-            // gridColumn2
+            // colviolation_frame_path_fld
             // 
-            this.gridColumn2.FieldName = "video_datetime_fld";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.colviolation_frame_path_fld.ColumnEdit = this.repositoryItemButtonEdit1;
+            this.colviolation_frame_path_fld.FieldName = "violation_frame_path_fld";
+            this.colviolation_frame_path_fld.Name = "colviolation_frame_path_fld";
+            // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "Image", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.repositoryItemButtonEdit1.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.ContextImageOptions.Image")));
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            // 
+            // colviolation_video_path_fld
+            // 
+            this.colviolation_video_path_fld.ColumnEdit = this.repositoryItemButtonEdit2;
+            this.colviolation_video_path_fld.FieldName = "violation_video_path_fld";
+            this.colviolation_video_path_fld.Name = "colviolation_video_path_fld";
+            this.colviolation_video_path_fld.OptionsColumn.AllowEdit = false;
+            // 
+            // repositoryItemButtonEdit2
+            // 
+            this.repositoryItemButtonEdit2.AutoHeight = false;
+            this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "Video", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
+            // 
+            // violation_tblTableAdapter
+            // 
+            this.violation_tblTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(323, 227);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(207, 34);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Video";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(110, 227);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(207, 34);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Image";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 605);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.gridControl5);
             this.Controls.Add(this.gridControl4);
             this.Controls.Add(this.gridControl3);
@@ -328,10 +413,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.cameraconfigurationtblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.violationtblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,7 +450,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn colvideo_datetime_fld;
         private DevExpress.XtraGrid.GridControl gridControl5;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private System.Windows.Forms.BindingSource violationtblBindingSource;
+        private dashboardDataSetTableAdapters.violation_tblTableAdapter violation_tblTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colviolation_datetime_fld;
+        private DevExpress.XtraGrid.Columns.GridColumn colviolation_frame_path_fld;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn colviolation_video_path_fld;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
