@@ -277,6 +277,116 @@ namespace WindowsDashboardApp
             gridView5.SelectAll();
         }
 
-       
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridControl5_MouseDown(object sender, MouseEventArgs e)
+        {
+                    
+        }
+
+        private void gridControl5_MouseUp(object sender, MouseEventArgs e)
+        {
+            DataRow row = gridView5.GetDataRow(gridView5.FocusedRowHandle);
+            //ColumnView view =  gridView5;
+            //MessageBox.Show(row[2].ToString());
+            if (rdBtn_vid.Checked)
+            {
+                pictureEdit1.Visible = false;
+                axWindowsMediaPlayer1.Visible = true;
+                axWindowsMediaPlayer1.URL = row[1].ToString();
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+                axWindowsMediaPlayer1.settings.setMode("loop", true);
+                //pictureEdit1.Image = Image.FromFile(row[1].ToString());
+            }
+            if (rdBtn_img.Checked)
+            {
+                axWindowsMediaPlayer1.Visible = false;
+                pictureEdit1.Visible = true;
+                
+                pictureEdit1.Image = Image.FromFile(row[2].ToString());
+                
+            }
+
+        }
+
+        private void rdBtn_img_CheckedChanged(object sender, EventArgs e)
+        {
+            DataRow row = gridView5.GetDataRow(gridView5.FocusedRowHandle);
+            //ColumnView view =  gridView5;
+            //MessageBox.Show(row[2].ToString());
+            if (rdBtn_vid.Checked)
+            {
+                pictureEdit1.Visible = false;
+                axWindowsMediaPlayer1.Visible = true;
+                axWindowsMediaPlayer1.URL = row[1].ToString();
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+                axWindowsMediaPlayer1.settings.setMode("loop", true);
+                //pictureEdit1.Image = Image.FromFile(row[1].ToString());
+            }
+            if (rdBtn_img.Checked)
+            {
+                axWindowsMediaPlayer1.Visible = false;
+                pictureEdit1.Visible = true;
+
+                pictureEdit1.Image = Image.FromFile(row[2].ToString());
+
+            }
+        }
+
+        private void rdBtn_vid_CheckedChanged(object sender, EventArgs e)
+        {
+            DataRow row = gridView5.GetDataRow(gridView5.FocusedRowHandle);
+            //ColumnView view =  gridView5;
+            //MessageBox.Show(row[2].ToString());
+            if (rdBtn_vid.Checked)
+            {
+                pictureEdit1.Visible = false;
+                axWindowsMediaPlayer1.Visible = true;
+                axWindowsMediaPlayer1.URL = row[1].ToString();
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+                axWindowsMediaPlayer1.settings.setMode("loop", true);
+                //pictureEdit1.Image = Image.FromFile(row[1].ToString());
+            }
+            if (rdBtn_img.Checked)
+            {
+                axWindowsMediaPlayer1.Visible = false;
+                pictureEdit1.Visible = true;
+
+                pictureEdit1.Image = Image.FromFile(row[2].ToString());
+
+            }
+        }
+
+        private void pictureEdit1_Layout(object sender, LayoutEventArgs e)
+        {
+            DataRow row = gridView5.GetDataRow(gridView5.FocusedRowHandle);
+            //ColumnView view =  gridView5;
+            //MessageBox.Show(row[2].ToString());
+            if (rdBtn_vid.Checked)
+            {
+                pictureEdit1.Visible = false;
+                axWindowsMediaPlayer1.Visible = true;
+                axWindowsMediaPlayer1.URL = row[1].ToString();
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+                axWindowsMediaPlayer1.settings.setMode("loop", true);
+                //pictureEdit1.Image = Image.FromFile(row[1].ToString());
+            }
+            if (rdBtn_img.Checked)
+            {
+                axWindowsMediaPlayer1.Visible = false;
+                pictureEdit1.Visible = true;
+
+                pictureEdit1.Image = Image.FromFile(row[2].ToString());
+
+            }
+        }
     }
 }
