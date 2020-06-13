@@ -24,7 +24,7 @@ namespace WindowsDashboardApp
         List<int> camlist = new List<int>();
         List<int> vidlist = new List<int>();
         List<int> violist = new List<int>();
-
+        int int_gbm_iva_id = 12;
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dashboardDataSet.violation_tbl' table. You can move, or remove it, as needed.
@@ -252,9 +252,23 @@ namespace WindowsDashboardApp
         }
         private void gridControl1_Load(object sender, EventArgs e)
         {
-         
+
+            ColumnView view = gridView1;
+            /*            if (gridView2.ActiveFilterString.Length > 0)
+                        {
+                            gridView2.ActiveFilterString = "";
+                        }
+            */
+            //            gridView2.ActiveFilterString = "[config_type_id] in (" + str_config_type_id + ")";
+            if (view.ActiveFilterString.Length > 0)
+            {
+                view.ActiveFilter.Remove(view.Columns["fk_gbm_iva_id"]);
+            }
+            view.ActiveFilter.Add(view.Columns["config_type_id"],
+              new ColumnFilterInfo("[fk_gbm_iva_id] = " + int_gbm_iva_id.ToString(), ""));
+
             gridView1.SelectAll();
-          
+
         }
 
         private void gridControl2_Load(object sender, EventArgs e)
