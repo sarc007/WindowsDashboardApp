@@ -1,6 +1,6 @@
 ﻿namespace WindowsDashboardApp
 {
-    partial class Form2
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.configurationtypetblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dashboardDataSet = new WindowsDashboardApp.dashboardDataSet();
@@ -74,11 +74,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdBtn_vid = new System.Windows.Forms.RadioButton();
             this.rdBtn_img = new System.Windows.Forms.RadioButton();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationtypetblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardDataSet)).BeginInit();
@@ -98,8 +101,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -305,13 +308,13 @@
             // gridControl5
             // 
             this.gridControl5.DataSource = this.violationtblBindingSource;
-            this.gridControl5.Location = new System.Drawing.Point(2, 246);
+            this.gridControl5.Location = new System.Drawing.Point(221, 215);
             this.gridControl5.MainView = this.gridView5;
             this.gridControl5.Name = "gridControl5";
             this.gridControl5.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemButtonEdit2});
-            this.gridControl5.Size = new System.Drawing.Size(465, 347);
+            this.gridControl5.Size = new System.Drawing.Size(308, 378);
             this.gridControl5.TabIndex = 4;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -359,7 +362,7 @@
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "Image", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "Image", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.repositoryItemButtonEdit1.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.ContextImageOptions.Image")));
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
@@ -375,7 +378,7 @@
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "Video", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "Video", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             // 
             // violation_tblTableAdapter
@@ -414,37 +417,23 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Offline";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.violationtblBindingSource, "violation_frame_path_fld", true));
-            this.pictureEdit1.Location = new System.Drawing.Point(473, 246);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.AllowDisposeImage = true;
-            this.pictureEdit1.Properties.EnableLODImages = true;
-            this.pictureEdit1.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Properties.SvgImageSize = new System.Drawing.Size(600, 400);
-            this.pictureEdit1.Size = new System.Drawing.Size(684, 347);
-            this.pictureEdit1.TabIndex = 14;
-            this.pictureEdit1.Layout += new System.Windows.Forms.LayoutEventHandler(this.pictureEdit1_Layout);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.rdBtn_vid);
             this.groupBox2.Controls.Add(this.rdBtn_img);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(615, 212);
+            this.groupBox2.Location = new System.Drawing.Point(615, 207);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(212, 34);
+            this.groupBox2.Size = new System.Drawing.Size(250, 36);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
             // rdBtn_vid
             // 
             this.rdBtn_vid.AutoSize = true;
-            this.rdBtn_vid.Location = new System.Drawing.Point(139, 11);
+            this.rdBtn_vid.Location = new System.Drawing.Point(99, 11);
             this.rdBtn_vid.Name = "rdBtn_vid";
             this.rdBtn_vid.Size = new System.Drawing.Size(52, 17);
             this.rdBtn_vid.TabIndex = 1;
@@ -465,21 +454,67 @@
             this.rdBtn_img.UseVisualStyleBackColor = true;
             this.rdBtn_img.CheckedChanged += new System.EventHandler(this.rdBtn_img_CheckedChanged);
             // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.violationtblBindingSource, "violation_frame_path_fld", true));
+            this.pictureEdit1.Location = new System.Drawing.Point(535, 246);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.AllowDisposeImage = true;
+            this.pictureEdit1.Properties.EnableLODImages = true;
+            this.pictureEdit1.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Properties.SvgImageSize = new System.Drawing.Size(600, 400);
+            this.pictureEdit1.Size = new System.Drawing.Size(622, 347);
+            this.pictureEdit1.TabIndex = 14;
+            this.pictureEdit1.Layout += new System.Windows.Forms.LayoutEventHandler(this.pictureEdit1_Layout);
+            // 
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(473, 246);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(535, 246);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(684, 347);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(622, 344);
             this.axWindowsMediaPlayer1.TabIndex = 16;
             this.axWindowsMediaPlayer1.Visible = false;
             // 
-            // Form2
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(535, 241);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(622, 349);
+            this.webBrowser1.TabIndex = 17;
+            this.webBrowser1.Url = new System.Uri("http://www.google.com", System.UriKind.Absolute);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(25, 324);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(283, 212);
+            this.listBox1.TabIndex = 18;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(37, 268);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 605);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.gridControl3);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.groupBox2);
@@ -487,9 +522,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gridControl5);
             this.Controls.Add(this.gridControl4);
-            this.Controls.Add(this.gridControl3);
             this.Controls.Add(this.gridControl2);
-            this.Name = "Form2";
+            this.Name = "Form3";
             this.Text = "IVA Filter Violations";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -512,9 +546,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
@@ -556,10 +590,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdBtn_vid;
         private System.Windows.Forms.RadioButton rdBtn_img;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

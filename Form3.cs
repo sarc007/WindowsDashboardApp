@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace WindowsDashboardApp
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
         }
@@ -40,7 +40,6 @@ namespace WindowsDashboardApp
             this.configuration_tblTableAdapter.Fill(this.dashboardDataSet.configuration_tbl);
             // TODO: This line of code loads data into the 'dashboardDataSet.configuration_type_tbl' table. You can move, or remove it, as needed.
             this.configuration_type_tblTableAdapter.Fill(this.dashboardDataSet.configuration_type_tbl);
-
 
 
            
@@ -444,6 +443,27 @@ namespace WindowsDashboardApp
                     }
 
                 }
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (var screen in System.Windows.Forms.Screen.AllScreens)
+            {
+                listBox1.Items.Add("Device Name: " + screen.DeviceName);
+                listBox1.Items.Add("Bounds: " +
+                    screen.Bounds.ToString());
+                listBox1.Items.Add("Type: " +
+                    screen.GetType().ToString());
+                listBox1.Items.Add("Working Area: " +
+                    screen.WorkingArea.ToString());
+                listBox1.Items.Add("Primary Screen: " +
+                    screen.Primary.ToString());
             }
         }
     }
